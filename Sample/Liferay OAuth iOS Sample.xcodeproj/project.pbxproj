@@ -30,7 +30,8 @@
 		CC1A162C1A84156900C4D9C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC1A16321A8416BF00C4D9C0 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		CC1A16341A8416BF00C4D9C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC5CBE751A84143100C6F696 /* Liferay OAuth iOS Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Liferay OAuth iOS Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1A163E1A841BFF00C4D9C0 /* Sample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sample-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC5CBE751A84143100C6F696 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5CBE8A1A84143100C6F696 /* Liferay OAuth iOS SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Liferay OAuth iOS SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				CC1A162C1A84156900C4D9C0 /* Info.plist */,
+				CC1A163E1A841BFF00C4D9C0 /* Sample-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -99,7 +101,7 @@
 		CC5CBE761A84143100C6F696 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CC5CBE751A84143100C6F696 /* Liferay OAuth iOS Sample.app */,
+				CC5CBE751A84143100C6F696 /* Sample.app */,
 				CC5CBE8A1A84143100C6F696 /* Liferay OAuth iOS SampleTests.xctest */,
 			);
 			name = Products;
@@ -122,7 +124,7 @@
 			);
 			name = Sample;
 			productName = "Liferay OAuth iOS Sample";
-			productReference = CC5CBE751A84143100C6F696 /* Liferay OAuth iOS Sample.app */;
+			productReference = CC5CBE751A84143100C6F696 /* Sample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CC5CBE891A84143100C6F696 /* Test */ = {
@@ -309,9 +311,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Supporting Files/Sample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -319,9 +324,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Supporting Files/Sample-Bridging-Header.h";
 			};
 			name = Release;
 		};
