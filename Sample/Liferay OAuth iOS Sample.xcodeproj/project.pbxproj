@@ -111,11 +111,19 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CC5CBE6C1A84143100C6F696 = {
+		CC3F6E501A84357600EEBE1B /* Sample */ = {
 			isa = PBXGroup;
 			children = (
 				CC1A16241A8414DF00C4D9C0 /* Source */,
 				CC1A16311A8416BF00C4D9C0 /* Test */,
+			);
+			name = Sample;
+			sourceTree = "<group>";
+		};
+		CC5CBE6C1A84143100C6F696 = {
+			isa = PBXGroup;
+			children = (
+				CC3F6E501A84357600EEBE1B /* Sample */,
 				CC5CBE761A84143100C6F696 /* Products */,
 				0C500D5E581F3528DAA85C1B /* Pods */,
 				1FC640246614EAEC62582DD5 /* Frameworks */,
