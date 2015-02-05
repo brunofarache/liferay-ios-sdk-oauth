@@ -75,8 +75,8 @@
 		CC1A16311A8416BF00C4D9C0 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				CC1A16321A8416BF00C4D9C0 /* Tests.swift */,
 				CC1A16331A8416BF00C4D9C0 /* Supporting Files */,
+				CC1A16321A8416BF00C4D9C0 /* Tests.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
