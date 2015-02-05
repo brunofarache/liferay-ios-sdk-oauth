@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC1A16281A8414DF00C4D9C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A16251A8414DF00C4D9C0 /* AppDelegate.swift */; };
+		CC1A162A1A8414DF00C4D9C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A16271A8414DF00C4D9C0 /* ViewController.swift */; };
+		CC1A162D1A84156900C4D9C0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC1A162C1A84156900C4D9C0 /* Info.plist */; };
+		CC1A16351A8416BF00C4D9C0 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A16321A8416BF00C4D9C0 /* Tests.swift */; };
+		CC1A16361A8416BF00C4D9C0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC1A16341A8416BF00C4D9C0 /* Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC5CBE8B1A84143100C6F696 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC5CBE6D1A84143100C6F696 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC5CBE741A84143100C6F696;
+			remoteInfo = "Liferay OAuth iOS Sample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC1A16251A8414DF00C4D9C0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC1A16271A8414DF00C4D9C0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC1A162C1A84156900C4D9C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC1A16321A8416BF00C4D9C0 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		CC1A16341A8416BF00C4D9C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC5CBE751A84143100C6F696 /* Liferay OAuth iOS Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Liferay OAuth iOS Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5CBE8A1A84143100C6F696 /* Liferay OAuth iOS SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Liferay OAuth iOS SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC5CBE721A84143100C6F696 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5CBE871A84143100C6F696 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC1A16241A8414DF00C4D9C0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CC1A162B1A84156900C4D9C0 /* Supporting Files */,
+				CC1A16251A8414DF00C4D9C0 /* AppDelegate.swift */,
+				CC1A16271A8414DF00C4D9C0 /* ViewController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		CC1A162B1A84156900C4D9C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC1A162C1A84156900C4D9C0 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC1A16311A8416BF00C4D9C0 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				CC1A16321A8416BF00C4D9C0 /* Tests.swift */,
+				CC1A16331A8416BF00C4D9C0 /* Supporting Files */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		CC1A16331A8416BF00C4D9C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC1A16341A8416BF00C4D9C0 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC5CBE6C1A84143100C6F696 = {
+			isa = PBXGroup;
+			children = (
+				CC1A16241A8414DF00C4D9C0 /* Source */,
+				CC1A16311A8416BF00C4D9C0 /* Test */,
+				CC5CBE761A84143100C6F696 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC5CBE761A84143100C6F696 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC5CBE751A84143100C6F696 /* Liferay OAuth iOS Sample.app */,
+				CC5CBE8A1A84143100C6F696 /* Liferay OAuth iOS SampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC5CBE741A84143100C6F696 /* Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC5CBE941A84143100C6F696 /* Build configuration list for PBXNativeTarget "Sample" */;
+			buildPhases = (
+				CC5CBE711A84143100C6F696 /* Sources */,
+				CC5CBE721A84143100C6F696 /* Frameworks */,
+				CC5CBE731A84143100C6F696 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sample;
+			productName = "Liferay OAuth iOS Sample";
+			productReference = CC5CBE751A84143100C6F696 /* Liferay OAuth iOS Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC5CBE891A84143100C6F696 /* Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC5CBE971A84143100C6F696 /* Build configuration list for PBXNativeTarget "Test" */;
+			buildPhases = (
+				CC5CBE861A84143100C6F696 /* Sources */,
+				CC5CBE871A84143100C6F696 /* Frameworks */,
+				CC5CBE881A84143100C6F696 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC5CBE8C1A84143100C6F696 /* PBXTargetDependency */,
+			);
+			name = Test;
+			productName = "Liferay OAuth iOS SampleTests";
+			productReference = CC5CBE8A1A84143100C6F696 /* Liferay OAuth iOS SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC5CBE6D1A84143100C6F696 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Liferay Inc.";
+				TargetAttributes = {
+					CC5CBE741A84143100C6F696 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					CC5CBE891A84143100C6F696 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = CC5CBE741A84143100C6F696;
+					};
+				};
+			};
+			buildConfigurationList = CC5CBE701A84143100C6F696 /* Build configuration list for PBXProject "Liferay OAuth iOS Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC5CBE6C1A84143100C6F696;
+			productRefGroup = CC5CBE761A84143100C6F696 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC5CBE741A84143100C6F696 /* Sample */,
+				CC5CBE891A84143100C6F696 /* Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC5CBE731A84143100C6F696 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC1A162D1A84156900C4D9C0 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5CBE881A84143100C6F696 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC1A16361A8416BF00C4D9C0 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC5CBE711A84143100C6F696 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC1A162A1A8414DF00C4D9C0 /* ViewController.swift in Sources */,
+				CC1A16281A8414DF00C4D9C0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5CBE861A84143100C6F696 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC1A16351A8416BF00C4D9C0 /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC5CBE8C1A84143100C6F696 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC5CBE741A84143100C6F696 /* Sample */;
+			targetProxy = CC5CBE8B1A84143100C6F696 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CC5CBE921A84143100C6F696 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC5CBE931A84143100C6F696 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC5CBE951A84143100C6F696 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CC5CBE961A84143100C6F696 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CC5CBE981A84143100C6F696 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Test/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Liferay OAuth iOS Sample.app/Liferay OAuth iOS Sample";
+			};
+			name = Debug;
+		};
+		CC5CBE991A84143100C6F696 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Test/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Liferay OAuth iOS Sample.app/Liferay OAuth iOS Sample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC5CBE701A84143100C6F696 /* Build configuration list for PBXProject "Liferay OAuth iOS Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC5CBE921A84143100C6F696 /* Debug */,
+				CC5CBE931A84143100C6F696 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC5CBE941A84143100C6F696 /* Build configuration list for PBXNativeTarget "Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC5CBE951A84143100C6F696 /* Debug */,
+				CC5CBE961A84143100C6F696 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC5CBE971A84143100C6F696 /* Build configuration list for PBXNativeTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC5CBE981A84143100C6F696 /* Debug */,
+				CC5CBE991A84143100C6F696 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC5CBE6D1A84143100C6F696 /* Project object */;
+}

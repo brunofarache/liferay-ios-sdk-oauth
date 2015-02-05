@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CFB7C248-E2F6-4C03-B5F8-899AC642764F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Liferay OAuth iOS Sample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>162F4DD120352F88FBE0EBEE6C141C62D492E641</key>
+		<string>https://github.com/brunofarache/liferay-ios-sdk-oauth.git</string>
+		<key>4974129707A2BE0A6A755E6AC54E0FE248AC5FF7</key>
+		<string>https://github.com/brunofarache/liferay-mobile-sdk.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Liferay OAuth iOS Sample/Liferay OAuth iOS Sample.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>162F4DD120352F88FBE0EBEE6C141C62D492E641</key>
+		<string>../../..</string>
+		<key>4974129707A2BE0A6A755E6AC54E0FE248AC5FF7</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/brunofarache/liferay-ios-sdk-oauth.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>162F4DD120352F88FBE0EBEE6C141C62D492E641</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4974129707A2BE0A6A755E6AC54E0FE248AC5FF7</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>162F4DD120352F88FBE0EBEE6C141C62D492E641</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
