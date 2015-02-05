@@ -13,6 +13,9 @@
 		CC1A162D1A84156900C4D9C0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC1A162C1A84156900C4D9C0 /* Info.plist */; };
 		CC1A16351A8416BF00C4D9C0 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A16321A8416BF00C4D9C0 /* Tests.swift */; };
 		CC1A16361A8416BF00C4D9C0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC1A16341A8416BF00C4D9C0 /* Info.plist */; };
+		CC3F6E591A8435EB00EEBE1B /* LRRequestToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3F6E541A8435EB00EEBE1B /* LRRequestToken.m */; };
+		CC3F6E5A1A8435EB00EEBE1B /* LROAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3F6E561A8435EB00EEBE1B /* LROAuth.m */; };
+		CC3F6E5B1A8435EB00EEBE1B /* LROAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3F6E581A8435EB00EEBE1B /* LROAuthConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,13 @@
 		CC1A16321A8416BF00C4D9C0 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		CC1A16341A8416BF00C4D9C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC1A163E1A841BFF00C4D9C0 /* Sample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sample-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC3F6E531A8435EB00EEBE1B /* LRRequestToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRequestToken.h; sourceTree = "<group>"; };
+		CC3F6E541A8435EB00EEBE1B /* LRRequestToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRequestToken.m; sourceTree = "<group>"; };
+		CC3F6E551A8435EB00EEBE1B /* LROAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth.h; sourceTree = "<group>"; };
+		CC3F6E561A8435EB00EEBE1B /* LROAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LROAuth.m; sourceTree = "<group>"; };
+		CC3F6E571A8435EB00EEBE1B /* LROAuthConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuthConfig.h; sourceTree = "<group>"; };
+		CC3F6E581A8435EB00EEBE1B /* LROAuthConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LROAuthConfig.m; sourceTree = "<group>"; };
+		CC5612661A84384000276A20 /* Sample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sample-Prefix.pch"; sourceTree = "<group>"; };
 		CC5CBE751A84143100C6F696 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5CBE8A1A84143100C6F696 /* Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,6 +98,7 @@
 		CC1A162B1A84156900C4D9C0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CC5612661A84384000276A20 /* Sample-Prefix.pch */,
 				CC1A162C1A84156900C4D9C0 /* Info.plist */,
 				CC1A163E1A841BFF00C4D9C0 /* Sample-Bridging-Header.h */,
 			);
@@ -120,9 +131,32 @@
 			name = Sample;
 			sourceTree = "<group>";
 		};
+		CC3F6E511A8435EB00EEBE1B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CC3F6E521A8435EB00EEBE1B /* Flow */,
+				CC3F6E551A8435EB00EEBE1B /* LROAuth.h */,
+				CC3F6E561A8435EB00EEBE1B /* LROAuth.m */,
+				CC3F6E571A8435EB00EEBE1B /* LROAuthConfig.h */,
+				CC3F6E581A8435EB00EEBE1B /* LROAuthConfig.m */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
+		CC3F6E521A8435EB00EEBE1B /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				CC3F6E531A8435EB00EEBE1B /* LRRequestToken.h */,
+				CC3F6E541A8435EB00EEBE1B /* LRRequestToken.m */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
 		CC5CBE6C1A84143100C6F696 = {
 			isa = PBXGroup;
 			children = (
+				CC3F6E511A8435EB00EEBE1B /* Source */,
 				CC3F6E501A84357600EEBE1B /* Sample */,
 				CC5CBE761A84143100C6F696 /* Products */,
 				0C500D5E581F3528DAA85C1B /* Pods */,
@@ -274,7 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC1A162A1A8414DF00C4D9C0 /* ViewController.swift in Sources */,
+				CC3F6E5B1A8435EB00EEBE1B /* LROAuthConfig.m in Sources */,
 				CC1A16281A8414DF00C4D9C0 /* AppDelegate.swift in Sources */,
+				CC3F6E591A8435EB00EEBE1B /* LRRequestToken.m in Sources */,
+				CC3F6E5A1A8435EB00EEBE1B /* LROAuth.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +417,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Source/Supporting Files/Sample-Prefix.pch";
 				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -394,6 +433,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Source/Supporting Files/Sample-Prefix.pch";
 				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
