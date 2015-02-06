@@ -10,9 +10,7 @@
 		9E6B82977996167422CC96B4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22AC7F1490C7F7AFCF42E12 /* libPods.a */; };
 		CC1A16281A8414DF00C4D9C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A16251A8414DF00C4D9C0 /* AppDelegate.swift */; };
 		CC1A162A1A8414DF00C4D9C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A16271A8414DF00C4D9C0 /* ViewController.swift */; };
-		CC1A162D1A84156900C4D9C0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC1A162C1A84156900C4D9C0 /* Info.plist */; };
 		CC1A16351A8416BF00C4D9C0 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A16321A8416BF00C4D9C0 /* Tests.swift */; };
-		CC1A16361A8416BF00C4D9C0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC1A16341A8416BF00C4D9C0 /* Info.plist */; };
 		CC3F6E591A8435EB00EEBE1B /* LRRequestToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3F6E541A8435EB00EEBE1B /* LRRequestToken.m */; };
 		CC3F6E5A1A8435EB00EEBE1B /* LROAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3F6E561A8435EB00EEBE1B /* LROAuth.m */; };
 		CC3F6E5B1A8435EB00EEBE1B /* LROAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3F6E581A8435EB00EEBE1B /* LROAuthConfig.m */; };
@@ -255,7 +253,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC1A162D1A84156900C4D9C0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +260,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC1A16361A8416BF00C4D9C0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
