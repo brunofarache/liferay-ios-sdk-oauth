@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9E6B82977996167422CC96B4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22AC7F1490C7F7AFCF42E12 /* libPods.a */; };
-		CC1A16281A8414DF00C4D9C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A16251A8414DF00C4D9C0 /* AppDelegate.swift */; };
-		CC1A162A1A8414DF00C4D9C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A16271A8414DF00C4D9C0 /* ViewController.swift */; };
-		CC1A16351A8416BF00C4D9C0 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A16321A8416BF00C4D9C0 /* Tests.swift */; };
-		CC3F6E591A8435EB00EEBE1B /* LRRequestToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3F6E541A8435EB00EEBE1B /* LRRequestToken.m */; };
-		CC3F6E5A1A8435EB00EEBE1B /* LROAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3F6E561A8435EB00EEBE1B /* LROAuth.m */; };
-		CC3F6E5B1A8435EB00EEBE1B /* LROAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3F6E581A8435EB00EEBE1B /* LROAuthConfig.m */; };
+		CC4A6BBD1A8523C600D15379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BB31A8523C600D15379 /* AppDelegate.swift */; };
+		CC4A6BBF1A8523C600D15379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BB81A8523C600D15379 /* ViewController.swift */; };
+		CC4A6BC01A8523C600D15379 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC4A6BBB1A8523C600D15379 /* Info.plist */; };
+		CC4A6BCA1A8523F400D15379 /* LRRequestToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC51A8523F400D15379 /* LRRequestToken.m */; };
+		CC4A6BCB1A8523F400D15379 /* LROAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC71A8523F400D15379 /* LROAuth.m */; };
+		CC4A6BCC1A8523F400D15379 /* LROAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC91A8523F400D15379 /* LROAuthConfig.m */; };
+		CC4A6BCD1A85272D00D15379 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BBC1A8523C600D15379 /* Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,19 +31,19 @@
 		1901028DC308BA3EBFFE0886 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4CD58D74296BBF065248CC23 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C22AC7F1490C7F7AFCF42E12 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC1A16251A8414DF00C4D9C0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC1A16271A8414DF00C4D9C0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CC1A162C1A84156900C4D9C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC1A16321A8416BF00C4D9C0 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		CC1A16341A8416BF00C4D9C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC1A163E1A841BFF00C4D9C0 /* Sample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sample-Bridging-Header.h"; sourceTree = "<group>"; };
-		CC3F6E531A8435EB00EEBE1B /* LRRequestToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRequestToken.h; sourceTree = "<group>"; };
-		CC3F6E541A8435EB00EEBE1B /* LRRequestToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRequestToken.m; sourceTree = "<group>"; };
-		CC3F6E551A8435EB00EEBE1B /* LROAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth.h; sourceTree = "<group>"; };
-		CC3F6E561A8435EB00EEBE1B /* LROAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LROAuth.m; sourceTree = "<group>"; };
-		CC3F6E571A8435EB00EEBE1B /* LROAuthConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuthConfig.h; sourceTree = "<group>"; };
-		CC3F6E581A8435EB00EEBE1B /* LROAuthConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LROAuthConfig.m; sourceTree = "<group>"; };
-		CC5612661A84384000276A20 /* Sample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sample-Prefix.pch"; sourceTree = "<group>"; };
+		CC4A6BB31A8523C600D15379 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC4A6BB51A8523C600D15379 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC4A6BB61A8523C600D15379 /* Sample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sample-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC4A6BB71A8523C600D15379 /* Sample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sample-Prefix.pch"; sourceTree = "<group>"; };
+		CC4A6BB81A8523C600D15379 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC4A6BBB1A8523C600D15379 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC4A6BBC1A8523C600D15379 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		CC4A6BC41A8523F400D15379 /* LRRequestToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRequestToken.h; sourceTree = "<group>"; };
+		CC4A6BC51A8523F400D15379 /* LRRequestToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRequestToken.m; sourceTree = "<group>"; };
+		CC4A6BC61A8523F400D15379 /* LROAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth.h; sourceTree = "<group>"; };
+		CC4A6BC71A8523F400D15379 /* LROAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LROAuth.m; sourceTree = "<group>"; };
+		CC4A6BC81A8523F400D15379 /* LROAuthConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuthConfig.h; sourceTree = "<group>"; };
+		CC4A6BC91A8523F400D15379 /* LROAuthConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LROAuthConfig.m; sourceTree = "<group>"; };
 		CC5CBE751A84143100C6F696 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5CBE8A1A84143100C6F696 /* Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,70 +84,69 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CC1A16241A8414DF00C4D9C0 /* Source */ = {
+		CC4A6BB11A8523C600D15379 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
-				CC1A162B1A84156900C4D9C0 /* Supporting Files */,
-				CC1A16251A8414DF00C4D9C0 /* AppDelegate.swift */,
-				CC1A16271A8414DF00C4D9C0 /* ViewController.swift */,
+				CC4A6BB21A8523C600D15379 /* Source */,
+				CC4A6BB91A8523C600D15379 /* Test */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		CC4A6BB21A8523C600D15379 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CC4A6BB41A8523C600D15379 /* Supporting Files */,
+				CC4A6BB31A8523C600D15379 /* AppDelegate.swift */,
+				CC4A6BB81A8523C600D15379 /* ViewController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
-		CC1A162B1A84156900C4D9C0 /* Supporting Files */ = {
+		CC4A6BB41A8523C600D15379 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CC5612661A84384000276A20 /* Sample-Prefix.pch */,
-				CC1A162C1A84156900C4D9C0 /* Info.plist */,
-				CC1A163E1A841BFF00C4D9C0 /* Sample-Bridging-Header.h */,
+				CC4A6BB51A8523C600D15379 /* Info.plist */,
+				CC4A6BB61A8523C600D15379 /* Sample-Bridging-Header.h */,
+				CC4A6BB71A8523C600D15379 /* Sample-Prefix.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CC1A16311A8416BF00C4D9C0 /* Test */ = {
+		CC4A6BB91A8523C600D15379 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				CC1A16331A8416BF00C4D9C0 /* Supporting Files */,
-				CC1A16321A8416BF00C4D9C0 /* Tests.swift */,
+				CC4A6BBA1A8523C600D15379 /* Supporting Files */,
+				CC4A6BBC1A8523C600D15379 /* Tests.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
 		};
-		CC1A16331A8416BF00C4D9C0 /* Supporting Files */ = {
+		CC4A6BBA1A8523C600D15379 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CC1A16341A8416BF00C4D9C0 /* Info.plist */,
+				CC4A6BBB1A8523C600D15379 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CC3F6E501A84357600EEBE1B /* Sample */ = {
+		CC4A6BC21A8523F400D15379 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				CC1A16241A8414DF00C4D9C0 /* Source */,
-				CC1A16311A8416BF00C4D9C0 /* Test */,
+				CC4A6BC31A8523F400D15379 /* Flow */,
+				CC4A6BC61A8523F400D15379 /* LROAuth.h */,
+				CC4A6BC71A8523F400D15379 /* LROAuth.m */,
+				CC4A6BC81A8523F400D15379 /* LROAuthConfig.h */,
+				CC4A6BC91A8523F400D15379 /* LROAuthConfig.m */,
 			);
-			name = Sample;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		CC3F6E511A8435EB00EEBE1B /* Source */ = {
+		CC4A6BC31A8523F400D15379 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				CC3F6E521A8435EB00EEBE1B /* Flow */,
-				CC3F6E551A8435EB00EEBE1B /* LROAuth.h */,
-				CC3F6E561A8435EB00EEBE1B /* LROAuth.m */,
-				CC3F6E571A8435EB00EEBE1B /* LROAuthConfig.h */,
-				CC3F6E581A8435EB00EEBE1B /* LROAuthConfig.m */,
-			);
-			name = Source;
-			path = ../Source;
-			sourceTree = "<group>";
-		};
-		CC3F6E521A8435EB00EEBE1B /* Flow */ = {
-			isa = PBXGroup;
-			children = (
-				CC3F6E531A8435EB00EEBE1B /* LRRequestToken.h */,
-				CC3F6E541A8435EB00EEBE1B /* LRRequestToken.m */,
+				CC4A6BC41A8523F400D15379 /* LRRequestToken.h */,
+				CC4A6BC51A8523F400D15379 /* LRRequestToken.m */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -154,8 +154,8 @@
 		CC5CBE6C1A84143100C6F696 = {
 			isa = PBXGroup;
 			children = (
-				CC3F6E511A8435EB00EEBE1B /* Source */,
-				CC3F6E501A84357600EEBE1B /* Sample */,
+				CC4A6BB11A8523C600D15379 /* Sample */,
+				CC4A6BC21A8523F400D15379 /* Source */,
 				CC5CBE761A84143100C6F696 /* Products */,
 				0C500D5E581F3528DAA85C1B /* Pods */,
 				1FC640246614EAEC62582DD5 /* Frameworks */,
@@ -253,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4A6BC01A8523C600D15379 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,11 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC1A162A1A8414DF00C4D9C0 /* ViewController.swift in Sources */,
-				CC3F6E5B1A8435EB00EEBE1B /* LROAuthConfig.m in Sources */,
-				CC1A16281A8414DF00C4D9C0 /* AppDelegate.swift in Sources */,
-				CC3F6E591A8435EB00EEBE1B /* LRRequestToken.m in Sources */,
-				CC3F6E5A1A8435EB00EEBE1B /* LROAuth.m in Sources */,
+				CC4A6BBF1A8523C600D15379 /* ViewController.swift in Sources */,
+				CC4A6BBD1A8523C600D15379 /* AppDelegate.swift in Sources */,
+				CC4A6BCC1A8523F400D15379 /* LROAuthConfig.m in Sources */,
+				CC4A6BCB1A8523F400D15379 /* LROAuth.m in Sources */,
+				CC4A6BCA1A8523F400D15379 /* LRRequestToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC1A16351A8416BF00C4D9C0 /* Tests.swift in Sources */,
+				CC4A6BCD1A85272D00D15379 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,11 +415,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Source/Supporting Files/Sample-Prefix.pch";
-				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
+				GCC_PREFIX_HEADER = "Sample/Source/Supporting Files/Sample-Prefix.pch";
+				INFOPLIST_FILE = "Sample/Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Supporting Files/Sample-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sample/Source/Supporting Files/Sample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -430,11 +431,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Source/Supporting Files/Sample-Prefix.pch";
-				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
+				GCC_PREFIX_HEADER = "Sample/Source/Supporting Files/Sample-Prefix.pch";
+				INFOPLIST_FILE = "Sample/Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Supporting Files/Sample-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sample/Source/Supporting Files/Sample-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -450,7 +451,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Test/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Sample/Test/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sample.app/Sample";
@@ -465,7 +466,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Test/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Sample/Test/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sample.app/Sample";
