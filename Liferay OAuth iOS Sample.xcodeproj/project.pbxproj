@@ -15,6 +15,7 @@
 		CC4A6BCB1A8523F400D15379 /* LROAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC71A8523F400D15379 /* LROAuth.m */; };
 		CC4A6BCC1A8523F400D15379 /* LROAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC91A8523F400D15379 /* LROAuthConfig.m */; };
 		CC59EE6B1A852D840031E110 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC59EE6A1A852D840031E110 /* Info.plist */; };
+		CC59EE6E1A852F130031E110 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC59EE6D1A852F130031E110 /* settings.plist */; };
 		CCF924651A852A4E0032A9A9 /* OAuthTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF924601A85294C0032A9A9 /* OAuthTest.m */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 		CC4A6BC81A8523F400D15379 /* LROAuthConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuthConfig.h; sourceTree = "<group>"; };
 		CC4A6BC91A8523F400D15379 /* LROAuthConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LROAuthConfig.m; sourceTree = "<group>"; };
 		CC59EE6A1A852D840031E110 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC59EE6C1A852EB50031E110 /* Test-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Test-Prefix.pch"; sourceTree = "<group>"; };
+		CC59EE6D1A852F130031E110 /* settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
 		CC5CBE751A84143100C6F696 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5CBE8A1A84143100C6F696 /* Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF9245F1A85294C0032A9A9 /* LROAuth+Testable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LROAuth+Testable.h"; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				CC59EE6A1A852D840031E110 /* Info.plist */,
+				CC59EE6D1A852F130031E110 /* settings.plist */,
+				CC59EE6C1A852EB50031E110 /* Test-Prefix.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC59EE6B1A852D840031E110 /* Info.plist in Resources */,
+				CC59EE6E1A852F130031E110 /* settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +490,8 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Test/Supporting Files/Test-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -504,6 +512,8 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Test/Supporting Files/Test-Prefix.pch";
 				INFOPLIST_FILE = "Test/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

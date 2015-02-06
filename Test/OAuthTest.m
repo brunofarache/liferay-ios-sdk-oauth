@@ -12,6 +12,7 @@
  * details.
  */
 
+#import "LRBasicAuthentication.h"
 #import "LRGroupService_v62.h"
 #import "LROAuth+Testable.h"
 #import "LRRequestToken.h"
@@ -30,6 +31,24 @@
 @end
 
 @implementation OAuthTest
+
+- (void)setUp {
+	NSBundle *bundle = [NSBundle
+		bundleWithIdentifier:@"com.liferay.mobile.sdk.Test"];
+
+	NSString *path = [bundle pathForResource:@"settings" ofType:@"plist"];
+
+	self.settings = [[NSDictionary alloc] initWithContentsOfFile:path];
+
+	NSString *url = self.settings[@"url"];
+
+	id<LRAuthentication> authentication = [[LRBasicAuthentication alloc]
+		initWithUsername:self.settings[@"username"]
+		password:self.settings[@"password"]];
+
+	self.session = [[LRSession alloc] initWithServer:url
+		authentication:authentication];
+}
 
 - (void)testGetUserSites {
 	NSString *consumerKey = self.settings[@"oauth_consumer_key"];
