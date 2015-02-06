@@ -12,18 +12,21 @@
  * details.
  */
 
-#import "BaseTest.h"
-
 #import "LRGroupService_v62.h"
 #import "LROAuth+Testable.h"
 #import "LRRequestToken.h"
 #import "LRValidator.h"
 #import "TRVSMonitor.h"
+#import <XCTest/XCTest.h>
 
 /**
  * @author Bruno Farache
  */
-@interface OAuthTest : BaseTest
+@interface OAuthTest : XCTestCase
+
+@property (nonatomic, strong) LRSession *session;
+@property (nonatomic, strong) NSDictionary *settings;
+
 @end
 
 @implementation OAuthTest
@@ -102,6 +105,12 @@
 
 	NSString *consumerKey = self.settings[@"oauth_consumer_key"];
 	NSString *consumerSecret = self.settings[@"oauth_consumer_secret"];
+
+	if ([LRValidator isEmpty:consumerKey] ||
+		[LRValidator isEmpty:consumerSecret]) {
+
+		return;
+	}
 
 	LRSession *session = [[LRSession alloc] initWithSession:self.session];
 
