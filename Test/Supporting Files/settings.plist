@@ -10,11 +10,7 @@
 	<string>6bde7d8d5868f6e2d77f57634b5e5eb4</string>
 	<key>oauth_token_secret</key>
 	<string>88b33c89effd1819f4a1e940f63d5454</string>
-	<key>url</key>
+	<key>server</key>
 	<string>http://localhost:8080</string>
-	<key>username</key>
-	<string>test@liferay.com</string>
-	<key>password</key>
-	<string>test</string>
 </dict>
 </plist>

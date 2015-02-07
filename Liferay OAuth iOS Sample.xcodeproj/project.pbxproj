@@ -16,7 +16,7 @@
 		CC4A6BCC1A8523F400D15379 /* LROAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC91A8523F400D15379 /* LROAuthConfig.m */; };
 		CC59EE6B1A852D840031E110 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC59EE6A1A852D840031E110 /* Info.plist */; };
 		CC59EE6E1A852F130031E110 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC59EE6D1A852F130031E110 /* settings.plist */; };
-		CCF924651A852A4E0032A9A9 /* OAuthTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF924601A85294C0032A9A9 /* OAuthTest.m */; };
+		CC59EE741A853B180031E110 /* OAuthTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59EE701A8538870031E110 /* OAuthTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +47,11 @@
 		CC59EE6A1A852D840031E110 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC59EE6C1A852EB50031E110 /* Test-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Test-Prefix.pch"; sourceTree = "<group>"; };
 		CC59EE6D1A852F130031E110 /* settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
+		CC59EE701A8538870031E110 /* OAuthTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthTest.swift; sourceTree = "<group>"; };
+		CC59EE721A8538B50031E110 /* Test-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Test-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC5CBE751A84143100C6F696 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5CBE8A1A84143100C6F696 /* Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF9245F1A85294C0032A9A9 /* LROAuth+Testable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LROAuth+Testable.h"; sourceTree = "<group>"; };
-		CCF924601A85294C0032A9A9 /* OAuthTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +166,7 @@
 			children = (
 				CCF924611A85294C0032A9A9 /* Supporting Files */,
 				CCF9245F1A85294C0032A9A9 /* LROAuth+Testable.h */,
-				CCF924601A85294C0032A9A9 /* OAuthTest.m */,
+				CC59EE701A8538870031E110 /* OAuthTest.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -175,6 +176,7 @@
 			children = (
 				CC59EE6A1A852D840031E110 /* Info.plist */,
 				CC59EE6D1A852F130031E110 /* settings.plist */,
+				CC59EE721A8538B50031E110 /* Test-Bridging-Header.h */,
 				CC59EE6C1A852EB50031E110 /* Test-Prefix.pch */,
 			);
 			path = "Supporting Files";
@@ -358,7 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCF924651A852A4E0032A9A9 /* OAuthTest.m in Sources */,
+				CC59EE741A853B180031E110 /* OAuthTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +488,7 @@
 			baseConfigurationReference = 1901028DC308BA3EBFFE0886 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -499,6 +502,8 @@
 				INFOPLIST_FILE = "Test/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Test/Supporting Files/Test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sample.app/Sample";
 			};
 			name = Debug;
@@ -508,6 +513,7 @@
 			baseConfigurationReference = 4CD58D74296BBF065248CC23 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -517,6 +523,7 @@
 				INFOPLIST_FILE = "Test/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Test/Supporting Files/Test-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sample.app/Sample";
 			};
 			name = Release;
