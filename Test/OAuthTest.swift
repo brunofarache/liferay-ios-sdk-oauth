@@ -108,17 +108,14 @@ class Test: XCTestCase {
 
 		let session = LRSession(server: self.server)
 
-		let success = { (result: AnyObject!) -> () in
-			URL = result as String
+		session.onSuccess({
+			URL = $0 as String
 			monitor.signal()
-		}
-
-		let failure = { (e: NSError?) -> () in
-			error = e
+		},
+		onFailure: {
+			error = $0
 			monitor.signal()
-		}
-
-		session.onSuccess(success, onFailure: failure)
+		})
 
 		let config = LROAuthConfig(
 			consumerKey: "dpf43f3p2l4k3l03", consumerSecret: "kd94hf93k423kf44",
