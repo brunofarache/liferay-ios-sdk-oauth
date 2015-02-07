@@ -22,7 +22,7 @@ class Test: XCTestCase {
 	var server: String?
 	var settings: [String: String] = [:]
 
-    override func setUp() {
+	override func setUp() {
 		super.setUp()
 
 		let bundle = NSBundle(identifier: "com.liferay.mobile.sdk.Test")
@@ -63,7 +63,7 @@ class Test: XCTestCase {
 
 		XCTAssert("/test" == sites[0]["friendlyURL"] as NSString)
 		XCTAssert("/guest" == sites[1]["friendlyURL"] as NSString)
-    }
+	}
 
 	func testHeader() {
 		let config = LROAuthConfig(
