@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		9E6B82977996167422CC96B4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22AC7F1490C7F7AFCF42E12 /* libPods.a */; };
 		C9CCDC59DAFF856925086CDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22AC7F1490C7F7AFCF42E12 /* libPods.a */; };
+		CC4384C71A891E66006319E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4384C61A891E66006319E5 /* MainViewController.swift */; };
+		CC4384C91A89208E006319E5 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4384C81A89208E006319E5 /* Launch Screen.xib */; };
+		CC4384D71A8925B1006319E5 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4384D61A8925B1006319E5 /* MainViewController.xib */; };
 		CC4A6BBD1A8523C600D15379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BB31A8523C600D15379 /* AppDelegate.swift */; };
-		CC4A6BBF1A8523C600D15379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BB81A8523C600D15379 /* ViewController.swift */; };
 		CC4A6BCA1A8523F400D15379 /* LRRequestToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC51A8523F400D15379 /* LRRequestToken.m */; };
 		CC4A6BCB1A8523F400D15379 /* LROAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC71A8523F400D15379 /* LROAuth.m */; };
 		CC4A6BCC1A8523F400D15379 /* LROAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC91A8523F400D15379 /* LROAuthConfig.m */; };
-		CC59EE6B1A852D840031E110 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC59EE6A1A852D840031E110 /* Info.plist */; };
 		CC59EE6E1A852F130031E110 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC59EE6D1A852F130031E110 /* settings.plist */; };
 		CC59EE741A853B180031E110 /* OAuthTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59EE701A8538870031E110 /* OAuthTest.swift */; };
 /* End PBXBuildFile section */
@@ -33,11 +34,13 @@
 		1901028DC308BA3EBFFE0886 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4CD58D74296BBF065248CC23 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C22AC7F1490C7F7AFCF42E12 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC4384C61A891E66006319E5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CC4384C81A89208E006319E5 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		CC4384D61A8925B1006319E5 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		CC4A6BB31A8523C600D15379 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC4A6BB51A8523C600D15379 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC4A6BB61A8523C600D15379 /* Sample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sample-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC4A6BB71A8523C600D15379 /* Sample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sample-Prefix.pch"; sourceTree = "<group>"; };
-		CC4A6BB81A8523C600D15379 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC4A6BC41A8523F400D15379 /* LRRequestToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRequestToken.h; sourceTree = "<group>"; };
 		CC4A6BC51A8523F400D15379 /* LRRequestToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRequestToken.m; sourceTree = "<group>"; };
 		CC4A6BC61A8523F400D15379 /* LROAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth.h; sourceTree = "<group>"; };
@@ -104,7 +107,9 @@
 			children = (
 				CC4A6BB41A8523C600D15379 /* Supporting Files */,
 				CC4A6BB31A8523C600D15379 /* AppDelegate.swift */,
-				CC4A6BB81A8523C600D15379 /* ViewController.swift */,
+				CC4384C61A891E66006319E5 /* MainViewController.swift */,
+				CC4384C81A89208E006319E5 /* Launch Screen.xib */,
+				CC4384D61A8925B1006319E5 /* MainViewController.xib */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -266,6 +271,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4384C91A89208E006319E5 /* Launch Screen.xib in Resources */,
+				CC4384D71A8925B1006319E5 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +280,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC59EE6B1A852D840031E110 /* Info.plist in Resources */,
 				CC59EE6E1A852F130031E110 /* settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC4A6BBF1A8523C600D15379 /* ViewController.swift in Sources */,
+				CC4384C71A891E66006319E5 /* MainViewController.swift in Sources */,
 				CC4A6BBD1A8523C600D15379 /* AppDelegate.swift in Sources */,
 				CC4A6BCC1A8523F400D15379 /* LROAuthConfig.m in Sources */,
 				CC4A6BCB1A8523F400D15379 /* LROAuth.m in Sources */,
@@ -465,6 +471,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sample/Source/Supporting Files/Sample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -480,6 +487,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sample/Source/Supporting Files/Sample-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

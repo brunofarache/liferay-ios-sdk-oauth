@@ -1,5 +1,3 @@
-import UIKit
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -9,6 +7,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			application: UIApplication, didFinishLaunchingWithOptions
 			launchOptions: [NSObject: AnyObject]?)
 		-> Bool {
+
+		window = UIWindow(frame: UIScreen.mainScreen().bounds)
+		window!.rootViewController = MainViewController()
+		window!.makeKeyAndVisible()
 
 		return true
 	}

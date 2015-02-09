@@ -29,7 +29,7 @@ class Test: XCTestCase {
 		let path = bundle.pathForResource("settings", ofType: "plist")
 
 		self.settings = NSDictionary(contentsOfFile: path!) as [String: String]
-		self.server = self.settings["server"]!
+		self.server = self.settings["server"]
 	}
 
 	func testGetUserSites() {
@@ -118,7 +118,7 @@ class Test: XCTestCase {
 		})
 
 		let config = LROAuthConfig(
-			consumerKey: "dpf43f3p2l4k3l03", consumerSecret: "kd94hf93k423kf44",
+			consumerKey: consumerKey, consumerSecret: consumerSecret,
 			callbackURL: "http://callback")
 
 		LRRequestToken.requestTokenWithSession(session, config: config)
@@ -150,7 +150,7 @@ class Test: XCTestCase {
 		params["size"] = "original"
 
 		let signatureBase = oauth._getSignatureBaseWithMethod(
-		method, URL: URL, params: params)
+			method, URL: URL, params: params)
 
 		XCTAssert(
 			signatureBase == "GET&http%3A%2F%2Fphotos.example.net%2Fphotos&" +
