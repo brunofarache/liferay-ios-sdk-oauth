@@ -119,7 +119,7 @@ class Test: XCTestCase {
 
 		let config = LROAuthConfig(
 			consumerKey: consumerKey, consumerSecret: consumerSecret,
-			callbackURL: "http://callback")
+			callbackURL: "liferay://callback")
 
 		LRRequestToken.requestTokenWithSession(session, config: config)
 		monitor.wait()

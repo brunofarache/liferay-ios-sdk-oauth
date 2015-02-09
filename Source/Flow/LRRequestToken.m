@@ -45,9 +45,9 @@
 			NSDictionary *params = [LROAuth extractRequestParams:result];
 
 			NSString *authorizationURL = [NSString
-				stringWithFormat:@"%@%@?oauth_token=%@",
+				stringWithFormat:@"%@%@?oauth_token=%@&oauth_callback=%@",
 				session.server, config.authorizeTokenURL,
-				params[@"oauth_token"]];
+				params[@"oauth_token"], [LROAuth escape:config.callbackURL]];
 
 			[callback onSuccess:authorizationURL];
 		}
