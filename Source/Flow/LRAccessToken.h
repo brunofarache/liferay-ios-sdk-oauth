@@ -19,6 +19,8 @@
  */
 @interface LRAccessToken : NSObject
 
-+ (void)accessTokenWithConfig:(LROAuthConfig *)config;
++ (void)accessTokenWithConfig:(LROAuthConfig *)config
+	onSuccess:(void (^)(LROAuthConfig *))success
+	onFailure:(void (^)(NSError *))failure;
 
 @end

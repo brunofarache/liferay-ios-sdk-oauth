@@ -21,7 +21,10 @@
  */
 @implementation LRAccessToken
 
-+ (void)accessTokenWithConfig:(LROAuthConfig *)config {
++ (void)accessTokenWithConfig:(LROAuthConfig *)config
+		onSuccess:(void (^)(LROAuthConfig *))success
+		onFailure:(void (^)(NSError *))failure {
+
 	LROAuth *oauth = [[LROAuth alloc] initWithConfig:config];
 
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc]
@@ -44,6 +47,10 @@
 				consumerSecret:config.consumerSecret
 				token:params[@"oauth_token"]
 				tokenSecret:params[@"oauth_token_secret"]];
+
+			dispatch_async(dispatch_get_main_queue(), ^{
+				success(authorized);
+			});
 		}
 	] resume];
 }

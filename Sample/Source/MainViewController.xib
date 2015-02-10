@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Sample" customModuleProvider="target">
             <connections>
+                <outlet property="label" destination="u8Z-mq-SS1" id="Jmi-0s-Fb8"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ZIx-9E-gGB"/>
             </connections>
         </placeholder>
@@ -23,12 +24,24 @@
                         <action selector="login:" destination="-1" eventType="touchUpInside" id="1jb-D9-10a"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8Z-mq-SS1">
+                    <constraints>
+                        <constraint firstAttribute="width" priority="500" constant="100" id="oL9-Hv-p4H"/>
+                        <constraint firstAttribute="height" priority="500" constant="21" id="tSX-hr-a74"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="u8Z-mq-SS1" firstAttribute="top" secondItem="pBF-N0-1rn" secondAttribute="top" constant="70" id="3Fl-eU-xrs"/>
                 <constraint firstItem="pBF-N0-1rn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4sP-YF-cj6"/>
                 <constraint firstItem="pBF-N0-1rn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="46" id="LMV-j7-6nE"/>
+                <constraint firstAttribute="centerX" secondItem="u8Z-mq-SS1" secondAttribute="centerX" id="SWN-s5-xIw"/>
             </constraints>
+            <point key="canvasLocation" x="103" y="354"/>
         </view>
     </objects>
 </document>
