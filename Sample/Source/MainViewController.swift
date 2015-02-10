@@ -44,6 +44,9 @@ class MainViewController: UIViewController {
 	}
 
 	func accessTokenWithCallbackURL(callbackURL: NSURL) {
+		let params = LROAuth.extractRequestParams(callbackURL.query);
+		config.verifier = params["oauth_verifier"] as NSString
+
 		LRAccessToken.accessTokenWithConfig(
 			config,
 			onSuccess: {
