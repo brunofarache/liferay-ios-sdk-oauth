@@ -94,11 +94,12 @@ class Test: XCTestCase {
 
 	func testRequestToken() {
 		let monitor = TRVSMonitor()
-		var URL = ""
+		var authorizedConfig: LROAuthConfig!
 		var error: NSError?
 
 		let consumerKey = self.settings["oauth_consumer_key"]
 		let consumerSecret = self.settings["oauth_consumer_secret"]
+		let callbackURL = settings["oauth_callback_url"]
 
 		if (LRValidator.isEmpty(consumerKey) ||
 			LRValidator.isEmpty(consumerSecret)) {
@@ -109,7 +110,7 @@ class Test: XCTestCase {
 		let session = LRSession(server: self.server)
 
 		session.onSuccess({
-			URL = $0 as String
+			authorizedConfig = $0 as LROAuthConfig
 			monitor.signal()
 		},
 		onFailure: {
@@ -119,7 +120,7 @@ class Test: XCTestCase {
 
 		let config = LROAuthConfig(
 			consumerKey: consumerKey, consumerSecret: consumerSecret,
-			callbackURL: "liferay://callback")
+			callbackURL: callbackURL)
 
 		LRRequestToken.requestTokenWithSession(session, config: config)
 		monitor.wait()
@@ -128,7 +129,8 @@ class Test: XCTestCase {
 			"authorize?oauth_token="
 
 		XCTAssertNil(error)
-		XCTAssert(URL.hasPrefix(authorizationURL))
+		XCTAssert(
+			authorizedConfig.authorizeTokenURL.hasPrefix(authorizationURL))
 	}
 
 	func testSignature() {

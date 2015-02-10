@@ -13,6 +13,7 @@
 		CC4384C91A89208E006319E5 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4384C81A89208E006319E5 /* Launch Screen.xib */; };
 		CC4384D71A8925B1006319E5 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4384D61A8925B1006319E5 /* MainViewController.xib */; };
 		CC4384DA1A89627A006319E5 /* LRAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4384D91A89627A006319E5 /* LRAccessToken.m */; };
+		CC4384DB1A8A52A6006319E5 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC59EE6D1A852F130031E110 /* settings.plist */; };
 		CC4A6BBD1A8523C600D15379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BB31A8523C600D15379 /* AppDelegate.swift */; };
 		CC4A6BCA1A8523F400D15379 /* LRRequestToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC51A8523F400D15379 /* LRRequestToken.m */; };
 		CC4A6BCB1A8523F400D15379 /* LROAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC71A8523F400D15379 /* LROAuth.m */; };
@@ -277,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC4384C91A89208E006319E5 /* Launch Screen.xib in Resources */,
+				CC4384DB1A8A52A6006319E5 /* settings.plist in Resources */,
 				CC4384D71A8925B1006319E5 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

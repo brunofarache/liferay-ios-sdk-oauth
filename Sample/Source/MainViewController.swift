@@ -3,12 +3,17 @@ class MainViewController: UIViewController {
 	var config: LROAuthConfig!
 
 	override init() {
-		let consumerKey = "abb49e76-aafb-405a-8619-76be986e6752"
-		let consumerSecret = "525041f5b3f8f248643c31dd384637ed"
+		let bundle = NSBundle(identifier: "com.liferay.mobile.sdk.Sample")
+		let path = bundle.pathForResource("settings", ofType: "plist")
+		let settings = NSDictionary(contentsOfFile: path!) as [String: String]
+
+		let consumerKey = settings["oauth_consumer_key"]
+		let consumerSecret = settings["oauth_consumer_secret"]
+		let callbackURL = settings["oauth_callback_url"]
 
 		self.config = LROAuthConfig(
 			consumerKey: consumerKey, consumerSecret: consumerSecret,
-			callbackURL: "liferay://callback")
+			callbackURL: callbackURL)
 
 		super.init(nibName:"MainViewController", bundle:nil)
 	}
