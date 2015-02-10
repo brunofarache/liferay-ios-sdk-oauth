@@ -12,28 +12,24 @@
  * details.
  */
 
-#import "LRRequestToken.h"
+#import "LRAccessToken.h"
 
 #import "LROAuth.h"
 
 /**
  * @author Bruno Farache
  */
-@implementation LRRequestToken
+@implementation LRAccessToken
 
-+ (void)requestTokenWithSession:(LRSession *)session
-		config:(LROAuthConfig *)config {
-
-	[config setServer:session.server];
-
++ (void)accessTokenWithConfig:(LROAuthConfig *)config {
 	LROAuth *oauth = [[LROAuth alloc] initWithConfig:config];
 
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc]
-		initWithURL:[NSURL URLWithString:config.requestTokenURL]];
+		initWithURL:[NSURL URLWithString:config.accessTokenURL]];
+
+	[request setHTTPMethod:@"POST"];
 
 	[oauth authenticate:request];
-
-	id<LRCallback> callback = session.callback;
 
 	[[[NSURLSession sharedSession]
 		dataTaskWithRequest:request
@@ -43,10 +39,11 @@
 
 			NSDictionary *params = [LROAuth extractRequestParams:result];
 
-			[config setAuthorizeTokenURLWithServer:session.server
-				params:params];
-
-			[callback onSuccess:config];
+			LROAuthConfig *authorized = [[LROAuthConfig alloc]
+				initWithConsumerKey:config.consumerKey
+				consumerSecret:config.consumerSecret
+				token:params[@"oauth_token"]
+				tokenSecret:params[@"oauth_token_secret"]];
 		}
 	] resume];
 }

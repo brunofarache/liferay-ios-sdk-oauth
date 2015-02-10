@@ -12,6 +12,7 @@
 		CC4384C71A891E66006319E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4384C61A891E66006319E5 /* MainViewController.swift */; };
 		CC4384C91A89208E006319E5 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4384C81A89208E006319E5 /* Launch Screen.xib */; };
 		CC4384D71A8925B1006319E5 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4384D61A8925B1006319E5 /* MainViewController.xib */; };
+		CC4384DA1A89627A006319E5 /* LRAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4384D91A89627A006319E5 /* LRAccessToken.m */; };
 		CC4A6BBD1A8523C600D15379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BB31A8523C600D15379 /* AppDelegate.swift */; };
 		CC4A6BCA1A8523F400D15379 /* LRRequestToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC51A8523F400D15379 /* LRRequestToken.m */; };
 		CC4A6BCB1A8523F400D15379 /* LROAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC71A8523F400D15379 /* LROAuth.m */; };
@@ -37,6 +38,8 @@
 		CC4384C61A891E66006319E5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CC4384C81A89208E006319E5 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		CC4384D61A8925B1006319E5 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		CC4384D81A89627A006319E5 /* LRAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRAccessToken.h; sourceTree = "<group>"; };
+		CC4384D91A89627A006319E5 /* LRAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRAccessToken.m; sourceTree = "<group>"; };
 		CC4A6BB31A8523C600D15379 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC4A6BB51A8523C600D15379 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC4A6BB61A8523C600D15379 /* Sample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sample-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 		CC4A6BC31A8523F400D15379 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				CC4384D81A89627A006319E5 /* LRAccessToken.h */,
+				CC4384D91A89627A006319E5 /* LRAccessToken.m */,
 				CC4A6BC41A8523F400D15379 /* LRRequestToken.h */,
 				CC4A6BC51A8523F400D15379 /* LRRequestToken.m */,
 			);
@@ -359,6 +364,7 @@
 				CC4A6BCC1A8523F400D15379 /* LROAuthConfig.m in Sources */,
 				CC4A6BCB1A8523F400D15379 /* LROAuth.m in Sources */,
 				CC4A6BCA1A8523F400D15379 /* LRRequestToken.m in Sources */,
+				CC4384DA1A89627A006319E5 /* LRAccessToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

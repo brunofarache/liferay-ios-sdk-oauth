@@ -80,7 +80,37 @@
 		params[@"oauth_token"] = self.token;
 	}
 
+	if (self.verifier) {
+		params[@"oauth_verifier"] = [LROAuth escape:self.verifier];
+	}
+
 	return params;
+}
+
+- (NSString *)accessTokenURL {
+	if (!self.server) {
+		return _accessTokenURL;
+	}
+
+	return  [NSString stringWithFormat:@"%@%@", self.server, _accessTokenURL];
+}
+
+- (NSString *)requestTokenURL {
+	if (!self.server) {
+		return _requestTokenURL;
+	}
+
+	return  [NSString stringWithFormat:@"%@%@", self.server, _requestTokenURL];
+}
+
+- (void)setAuthorizeTokenURLWithServer:(NSString *)server
+		params:(NSDictionary *)params {
+
+	[self setToken:params[@"oauth_token"]];
+	[self setTokenSecret:params[@"oauth_token_secret"]];
+	[self setAuthorizeTokenURL:[NSString
+		stringWithFormat:@"%@%@?oauth_token=%@&oauth_callback=%@", server,
+		self.authorizeTokenURL, self.token, [LROAuth escape:self.callbackURL]]];
 }
 
 - (NSString *)_generateNonce {

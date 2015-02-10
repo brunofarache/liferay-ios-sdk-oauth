@@ -25,9 +25,11 @@
 @property (nonatomic, strong) NSString *nonce;
 @property (readonly, nonatomic, strong) NSDictionary *params;
 @property (nonatomic, strong) NSString *requestTokenURL;
+@property (nonatomic, strong) NSString *server;
 @property (nonatomic, strong) NSString *timestamp;
 @property (nonatomic, strong) NSString *token;
 @property (nonatomic, strong) NSString *tokenSecret;
+@property (nonatomic, strong) NSString *verifier;
 
 - (id)initWithConsumerKey:(NSString *)consumerKey
 	consumerSecret:(NSString *)consumerSecret
@@ -36,5 +38,8 @@
 - (id)initWithConsumerKey:(NSString *)consumerKey
 	consumerSecret:(NSString *)consumerSecret token:(NSString *)token
 	tokenSecret:(NSString *)tokenSecret;
+
+- (void)setAuthorizeTokenURLWithServer:(NSString *)server
+	params:(NSDictionary *)params;
 
 @end

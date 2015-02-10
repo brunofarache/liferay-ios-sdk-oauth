@@ -33,22 +33,12 @@
 }
 
 - (void)authenticate:(NSMutableURLRequest *)request {
-	NSMutableString *header = [NSMutableString string];
-
-	[header appendString:@"OAuth "];
-
-	NSDictionary *oauthParams = self.config.params;
-
-	NSArray *sortedKeys = [[oauthParams allKeys]
-		sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
-
-	for (NSString *key in sortedKeys) {
-		[header appendFormat:@"%@=\"%@\", ", key, oauthParams[key]];
-	}
-
 	NSString *method = request.HTTPMethod;
 	NSString *URL = [[request.URL absoluteString]
 		componentsSeparatedByString:@"?"][0];
+
+	NSMutableDictionary *oauthParams = [NSMutableDictionary
+		dictionaryWithDictionary:self.config.params];
 
 	NSMutableDictionary *params = [LROAuth
 		extractRequestParams:[request.URL query]];
@@ -58,7 +48,23 @@
 	NSString *signature = [self _getSignatureWithMethod:method URL:URL
 		params:params];
 
-	[header appendFormat:@"oauth_signature=\"%@\"", [LROAuth escape:signature]];
+	oauthParams[@"oauth_signature"] = [LROAuth escape:signature];
+
+	NSMutableString *header = [NSMutableString string];
+
+	[header appendString:@"OAuth "];
+
+	NSArray *sortedKeys = [[oauthParams allKeys]
+		sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+
+	for (int i = 0; i < [sortedKeys count]; i++) {
+		if (i > 0) {
+			[header appendString:@", "];
+		}
+
+		NSString *key = sortedKeys[i];
+		[header appendFormat:@"%@=\"%@\"", key, oauthParams[key]];
+	}
 
 	[request setValue:header forHTTPHeaderField:@"Authorization"];
 }
