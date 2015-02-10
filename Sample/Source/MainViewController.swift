@@ -1,11 +1,12 @@
 class MainViewController: UIViewController {
 
 	var config: LROAuthConfig!
+	var settings: [String: String] = [:]
 
 	override init() {
 		let bundle = NSBundle(identifier: "com.liferay.mobile.sdk.Sample")
 		let path = bundle.pathForResource("settings", ofType: "plist")
-		let settings = NSDictionary(contentsOfFile: path!) as [String: String]
+		settings = NSDictionary(contentsOfFile: path!) as [String: String]
 
 		let consumerKey = settings["oauth_consumer_key"]
 		let consumerSecret = settings["oauth_consumer_secret"]
@@ -23,19 +24,18 @@ class MainViewController: UIViewController {
 	}
 
 	@IBAction func login(sender: UIButton) {
-		let session = LRSession(server: "http://localhost:8080")
-
-		session.onSuccess({ (result: AnyObject!) -> () in
-			self.config = result as LROAuthConfig
-			let URL = NSURL.URLWithString(self.config.authorizeTokenURL)
-
-			UIApplication.sharedApplication().openURL(URL)
-		},
-		onFailure: { (e: NSError!) -> () in
-			NSLog("%@", e)
-		})
-
-		LRRequestToken.requestTokenWithSession(session, config: config)
+		LRRequestToken.requestTokenWithConfig(
+			config,
+			server: self.settings["server"],
+			onSuccess: {
+				self.config = $0
+				let URL = NSURL.URLWithString(self.config.authorizeTokenURL)
+				UIApplication.sharedApplication().openURL(URL)
+			},
+			onFailure: {
+				NSLog("%@", $0)
+			}
+		)
 	}
 
 	func accessTokenWithCallbackURL(callbackURL: NSURL) {

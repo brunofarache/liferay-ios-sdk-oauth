@@ -103,13 +103,11 @@
 	return  [NSString stringWithFormat:@"%@%@", self.server, _requestTokenURL];
 }
 
-- (void)setAuthorizeTokenURLWithServer:(NSString *)server
-		params:(NSDictionary *)params {
-
+- (void)setAuthorizeTokenURLWithParams:(NSDictionary *)params {
 	[self setToken:params[@"oauth_token"]];
 	[self setTokenSecret:params[@"oauth_token_secret"]];
 	[self setAuthorizeTokenURL:[NSString
-		stringWithFormat:@"%@%@?oauth_token=%@&oauth_callback=%@", server,
+		stringWithFormat:@"%@%@?oauth_token=%@&oauth_callback=%@", self.server,
 		self.authorizeTokenURL, self.token, [LROAuth escape:self.callbackURL]]];
 }
 

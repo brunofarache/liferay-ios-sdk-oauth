@@ -21,10 +21,11 @@
  */
 @implementation LRRequestToken
 
-+ (void)requestTokenWithSession:(LRSession *)session
-		config:(LROAuthConfig *)config {
++ (void)requestTokenWithConfig:(LROAuthConfig *)config
+		server:(NSString *)server onSuccess:(void (^)(LROAuthConfig *))success
+		onFailure:(void (^)(NSError *))failure {
 
-	[config setServer:session.server];
+	[config setServer:server];
 
 	LROAuth *oauth = [[LROAuth alloc] initWithConfig:config];
 
@@ -32,8 +33,6 @@
 		initWithURL:[NSURL URLWithString:config.requestTokenURL]];
 
 	[oauth authenticate:request];
-
-	id<LRCallback> callback = session.callback;
 
 	[[[NSURLSession sharedSession]
 		dataTaskWithRequest:request
@@ -43,10 +42,9 @@
 
 			NSDictionary *params = [LROAuth extractRequestParams:result];
 
-			[config setAuthorizeTokenURLWithServer:session.server
-				params:params];
+			[config setAuthorizeTokenURLWithParams:params];
 
-			[callback onSuccess:config];
+			success(config);
 		}
 	] resume];
 }

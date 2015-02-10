@@ -21,7 +21,8 @@
  */
 @interface LRRequestToken : NSObject
 
-+ (void)requestTokenWithSession:(LRSession *)session
-	config:(LROAuthConfig *)config;
++ (void)requestTokenWithConfig:(LROAuthConfig *)config
+	server:(NSString *)server onSuccess:(void (^)(LROAuthConfig *))success
+	onFailure:(void (^)(NSError *))failure;
 
 @end

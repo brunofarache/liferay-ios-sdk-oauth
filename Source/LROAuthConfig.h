@@ -39,7 +39,6 @@
 	consumerSecret:(NSString *)consumerSecret token:(NSString *)token
 	tokenSecret:(NSString *)tokenSecret;
 
-- (void)setAuthorizeTokenURLWithServer:(NSString *)server
-	params:(NSDictionary *)params;
+- (void)setAuthorizeTokenURLWithParams:(NSDictionary *)params;
 
 @end

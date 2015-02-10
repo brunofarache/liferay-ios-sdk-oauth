@@ -107,22 +107,23 @@ class Test: XCTestCase {
 			return
 		}
 
-		let session = LRSession(server: self.server)
-
-		session.onSuccess({
-			authorizedConfig = $0 as LROAuthConfig
-			monitor.signal()
-		},
-		onFailure: {
-			error = $0
-			monitor.signal()
-		})
-
 		let config = LROAuthConfig(
 			consumerKey: consumerKey, consumerSecret: consumerSecret,
 			callbackURL: callbackURL)
 
-		LRRequestToken.requestTokenWithSession(session, config: config)
+		LRRequestToken.requestTokenWithConfig(
+			config,
+			server: self.server,
+			onSuccess: {
+				authorizedConfig = $0
+				monitor.signal()
+			},
+			onFailure: {
+				error = $0
+				monitor.signal()
+			}
+		)
+
 		monitor.wait()
 
 		let authorizationURL = "\(self.server!)/c/portal/oauth/" +
