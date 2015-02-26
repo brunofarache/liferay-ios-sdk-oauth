@@ -26,8 +26,8 @@
 		callbackURL:(NSString *)callbackURL {
 
 	return [self initWithServer:server consumerKey:consumerKey
-		consumerSecret:consumerSecret callbackURL:callbackURL token:nil
-		tokenSecret:nil];
+		consumerSecret:consumerSecret token:nil tokenSecret:nil
+		callbackURL:callbackURL];
 }
 
 - (id)initWithConsumerKey:(NSString *)consumerKey
@@ -35,14 +35,14 @@
 		tokenSecret:(NSString *)tokenSecret {
 
 	return [self initWithServer:nil consumerKey:consumerKey
-		consumerSecret:consumerSecret callbackURL:nil token:token
-		tokenSecret:tokenSecret];
+		consumerSecret:consumerSecret token:token tokenSecret:tokenSecret
+		callbackURL:nil];
 }
 
 - (id)initWithServer:(NSString *)server consumerKey:(NSString *)consumerKey
-		consumerSecret:(NSString *)consumerSecret
-		callbackURL:(NSString *)callbackURL token:(NSString *)token
-		tokenSecret:(NSString *)tokenSecret {
+		consumerSecret:(NSString *)consumerSecret token:(NSString *)token
+		tokenSecret:(NSString *)tokenSecret
+		callbackURL:(NSString *)callbackURL {
 
 	self = [super init];
 
