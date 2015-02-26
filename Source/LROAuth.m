@@ -21,8 +21,16 @@
  */
 @implementation LROAuth
 
-- (id)initWithConfig:(LROAuthConfig *)config {
+- (id)initWithConsumerKey:(NSString *)consumerKey
+		consumerSecret:(NSString *)consumerSecret token:(NSString *)token
+		tokenSecret:(NSString *)tokenSecret {
 
+	return [self initWithConfig:[[LROAuthConfig alloc]
+		initWithConsumerKey:consumerKey consumerSecret:consumerSecret
+		token:token tokenSecret:tokenSecret]];
+}
+
+- (id)initWithConfig:(LROAuthConfig *)config {
 	self = [super init];
 
 	if (self) {

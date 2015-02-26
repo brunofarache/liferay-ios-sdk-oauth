@@ -31,7 +31,7 @@
 @property (nonatomic, strong) NSString *tokenSecret;
 @property (nonatomic, strong) NSString *verifier;
 
-- (id)initWithConsumerKey:(NSString *)consumerKey
+- (id)initWithServer:(NSString *)server consumerKey:(NSString *)consumerKey
 	consumerSecret:(NSString *)consumerSecret
 	callbackURL:(NSString *)callbackURL;
 

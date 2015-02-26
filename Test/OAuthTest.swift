@@ -46,11 +46,10 @@ class Test: XCTestCase {
 			return
 		}
 
-		let config = LROAuthConfig(
+		let oauth = LROAuth(
 			consumerKey: consumerKey, consumerSecret: consumerSecret,
 			token: token, tokenSecret: tokenSecret)
 
-		let oauth = LROAuth(config: config)
 		let session = LRSession(
 			server: self.server, authentication: oauth)
 
@@ -66,14 +65,13 @@ class Test: XCTestCase {
 	}
 
 	func testHeader() {
-		let config = LROAuthConfig(
+		let oauth = LROAuth(
 			consumerKey: "dpf43f3p2l4k3l03", consumerSecret: "kd94hf93k423kf44",
 			token: "nnch734d00sl2jdk", tokenSecret: "pfkkdhi9sl3r4s00")
 
-		config.nonce = "kllo9940pd9333jh"
-		config.timestamp = "1191242096"
+		oauth.config.nonce = "kllo9940pd9333jh"
+		oauth.config.timestamp = "1191242096"
 
-		let oauth = LROAuth(config: config)
 		let URL = NSURL(
 			string: "http://photos.example.net/photos?file=vacation.jpg" +
 				"&size=original")
@@ -108,12 +106,11 @@ class Test: XCTestCase {
 		}
 
 		let config = LROAuthConfig(
-			consumerKey: consumerKey, consumerSecret: consumerSecret,
-			callbackURL: callbackURL)
+			server: self.server, consumerKey: consumerKey,
+			consumerSecret: consumerSecret, callbackURL: callbackURL)
 
 		LRRequestToken.requestTokenWithConfig(
 			config,
-			server: self.server,
 			onSuccess: {
 				authorizedConfig = $0
 				monitor.signal()
@@ -135,14 +132,13 @@ class Test: XCTestCase {
 	}
 
 	func testSignature() {
-		let config = LROAuthConfig(
+		let oauth = LROAuth(
 			consumerKey: "dpf43f3p2l4k3l03", consumerSecret: "kd94hf93k423kf44",
 			token: "nnch734d00sl2jdk", tokenSecret: "pfkkdhi9sl3r4s00")
 
-		let oauth = LROAuth(config: config)
 		let method = "GET"
 		let URL = "http://photos.example.net/photos"
-		var params = config.params
+		var params = oauth.config.params
 
 		params["oauth_timestamp"] = "1191242096"
 		params["oauth_nonce"] = "kllo9940pd9333jh"

@@ -21,23 +21,25 @@
  */
 @implementation LROAuthConfig
 
-- (id)initWithConsumerKey:(NSString *)consumerKey
+- (id)initWithServer:(NSString *)server consumerKey:(NSString *)consumerKey
 		consumerSecret:(NSString *)consumerSecret
 		callbackURL:(NSString *)callbackURL {
 
-	return [self initWithConsumerKey:consumerKey consumerSecret:consumerSecret
-		callbackURL:callbackURL token:nil tokenSecret:nil];
+	return [self initWithServer:server consumerKey:consumerKey
+		consumerSecret:consumerSecret callbackURL:callbackURL token:nil
+		tokenSecret:nil];
 }
 
 - (id)initWithConsumerKey:(NSString *)consumerKey
 		consumerSecret:(NSString *)consumerSecret token:(NSString *)token
 		tokenSecret:(NSString *)tokenSecret {
 
-	return  [self initWithConsumerKey:consumerKey consumerSecret:consumerSecret
-		callbackURL:nil token:token tokenSecret:tokenSecret];
+	return [self initWithServer:nil consumerKey:consumerKey
+		consumerSecret:consumerSecret callbackURL:nil token:token
+		tokenSecret:tokenSecret];
 }
 
-- (id)initWithConsumerKey:(NSString *)consumerKey
+- (id)initWithServer:(NSString *)server consumerKey:(NSString *)consumerKey
 		consumerSecret:(NSString *)consumerSecret
 		callbackURL:(NSString *)callbackURL token:(NSString *)token
 		tokenSecret:(NSString *)tokenSecret {
@@ -51,6 +53,7 @@
 		self.consumerKey = consumerKey;
 		self.consumerSecret = consumerSecret;
 		self.requestTokenURL = @"/c/portal/oauth/request_token";
+		self.server = server;
 		self.token = token;
 		self.tokenSecret = tokenSecret ? : @"";
 	}

@@ -24,6 +24,10 @@
 
 - (id)initWithConfig:(LROAuthConfig *)config;
 
+- (id)initWithConsumerKey:(NSString *)consumerKey
+	consumerSecret:(NSString *)consumerSecret token:(NSString *)token
+	tokenSecret:(NSString *)tokenSecret;
+
 + (NSString *)escape:(NSString *)string;
 + (NSMutableDictionary *)extractRequestParams:(NSString *)query;
 

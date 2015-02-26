@@ -22,7 +22,7 @@
 @interface LRRequestToken : NSObject
 
 + (void)requestTokenWithConfig:(LROAuthConfig *)config
-	server:(NSString *)server onSuccess:(void (^)(LROAuthConfig *))success
+	onSuccess:(void (^)(LROAuthConfig *))success
 	onFailure:(void (^)(NSError *))failure;
 
 @end

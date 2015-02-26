@@ -22,10 +22,8 @@
 @implementation LRRequestToken
 
 + (void)requestTokenWithConfig:(LROAuthConfig *)config
-		server:(NSString *)server onSuccess:(void (^)(LROAuthConfig *))success
+		onSuccess:(void (^)(LROAuthConfig *))success
 		onFailure:(void (^)(NSError *))failure {
-
-	[config setServer:server];
 
 	LROAuth *oauth = [[LROAuth alloc] initWithConfig:config];
 

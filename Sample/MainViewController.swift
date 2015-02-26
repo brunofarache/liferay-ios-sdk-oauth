@@ -2,7 +2,6 @@ class MainViewController: UIViewController {
 
 	var config: LROAuthConfig!
 	@IBOutlet var label: UILabel!
-	var server: String?
 	var settings: [String: String] = [:]
 
 	override init() {
@@ -10,14 +9,14 @@ class MainViewController: UIViewController {
 		let path = bundle.pathForResource("settings", ofType: "plist")
 		settings = NSDictionary(contentsOfFile: path!) as [String: String]
 
+		let server = settings["server"]
 		let consumerKey = settings["oauth_consumer_key"]
 		let consumerSecret = settings["oauth_consumer_secret"]
 		let callbackURL = settings["oauth_callback_url"]
-		server = self.settings["server"]
 
 		self.config = LROAuthConfig(
-			consumerKey: consumerKey, consumerSecret: consumerSecret,
-			callbackURL: callbackURL)
+			server: server, consumerKey: consumerKey,
+			consumerSecret: consumerSecret, callbackURL: callbackURL)
 
 		super.init(nibName: "MainViewController", bundle: nil)
 	}
@@ -31,7 +30,6 @@ class MainViewController: UIViewController {
 
 		LRRequestToken.requestTokenWithConfig(
 			config,
-			server: server,
 			onSuccess: {
 				self.config = $0
 				let URL = NSURL.URLWithString(self.config.authorizeTokenURL)
@@ -52,7 +50,7 @@ class MainViewController: UIViewController {
 			onSuccess: {
 				let oauth = LROAuth(config: $0)
 				let session = LRSession(
-					server: self.server, authentication: oauth)
+					server: self.config.server, authentication: oauth)
 
 				let service = LRGroupService_v62(session: session)
 				var error: NSError?
