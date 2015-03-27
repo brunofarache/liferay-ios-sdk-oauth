@@ -26,7 +26,7 @@ class Test: XCTestCase {
 		super.setUp()
 
 		let bundle = NSBundle(identifier: "com.liferay.mobile.sdk.Test")
-		let path = bundle.pathForResource("settings", ofType: "plist")
+		let path = bundle?.pathForResource("settings", ofType: "plist")
 
 		self.settings = NSDictionary(contentsOfFile: path!) as [String: String]
 		self.server = self.settings["server"]
@@ -76,7 +76,7 @@ class Test: XCTestCase {
 			string: "http://photos.example.net/photos?file=vacation.jpg" +
 				"&size=original")
 
-		let request = NSMutableURLRequest(URL: URL)
+		let request = NSMutableURLRequest(URL: URL!)
 		oauth.authenticate(request)
 		let header = request.valueForHTTPHeaderField("Authorization")
 

@@ -6,7 +6,7 @@ class MainViewController: UIViewController {
 
 	override init() {
 		let bundle = NSBundle(identifier: "com.liferay.mobile.sdk.Sample")
-		let path = bundle.pathForResource("settings", ofType: "plist")
+		let path = bundle?.pathForResource("settings", ofType: "plist")
 		settings = NSDictionary(contentsOfFile: path!) as [String: String]
 
 		let server = settings["server"]
@@ -32,8 +32,8 @@ class MainViewController: UIViewController {
 			config,
 			onSuccess: {
 				self.config = $0
-				let URL = NSURL.URLWithString(self.config.authorizeTokenURL)
-				UIApplication.sharedApplication().openURL(URL)
+				let URL = NSURL(string: self.config.authorizeTokenURL)
+				UIApplication.sharedApplication().openURL(URL!)
 			},
 			onFailure: {
 				NSLog("%@", $0)
