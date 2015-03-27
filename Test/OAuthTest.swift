@@ -17,7 +17,7 @@ import XCTest
 /**
 * @author Bruno Farache
 */
-class Test: XCTestCase {
+class OAuthTest: XCTestCase {
 
 	var server: String?
 	var settings: [String: String] = [:]
