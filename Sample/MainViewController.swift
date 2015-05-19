@@ -4,10 +4,10 @@ class MainViewController: UIViewController {
 	@IBOutlet var label: UILabel!
 	var settings: [String: String] = [:]
 
-	override init() {
+	init() {
 		let bundle = NSBundle(identifier: "com.liferay.mobile.sdk.Sample")
 		let path = bundle?.pathForResource("settings", ofType: "plist")
-		settings = NSDictionary(contentsOfFile: path!) as [String: String]
+		settings = NSDictionary(contentsOfFile: path!) as! [String: String]
 
 		let server = settings["server"]
 		let consumerKey = settings["oauth_consumer_key"]
@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
 
 	func accessTokenWithCallbackURL(callbackURL: NSURL) {
 		let params = LROAuth.extractRequestParams(callbackURL.query);
-		config.verifier = params["oauth_verifier"] as NSString
+		config.verifier = params["oauth_verifier"] as! String
 
 		LRAccessToken.accessTokenWithConfig(
 			config,
@@ -58,7 +58,7 @@ class MainViewController: UIViewController {
 				var text = ""
 
 				for site in sites {
-					text = text + (site["name"]! as NSString) + "\n"
+					text = text + (site["name"]! as! String) + "\n"
 				}
 
 				self.label.text = text

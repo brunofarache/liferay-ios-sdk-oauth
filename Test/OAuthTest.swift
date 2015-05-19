@@ -28,7 +28,7 @@ class OAuthTest: XCTestCase {
 		let bundle = NSBundle(identifier: "com.liferay.mobile.sdk.Test")
 		let path = bundle?.pathForResource("settings", ofType: "plist")
 
-		self.settings = NSDictionary(contentsOfFile: path!) as [String: String]
+		self.settings = NSDictionary(contentsOfFile: path!) as! [String: String]
 		self.server = self.settings["server"]
 	}
 
@@ -60,8 +60,8 @@ class OAuthTest: XCTestCase {
 		XCTAssertNil(error)
 		XCTAssertTrue(sites.count > 0)
 
-		XCTAssert("/test" == sites[0]["friendlyURL"] as NSString)
-		XCTAssert("/guest" == sites[1]["friendlyURL"] as NSString)
+		XCTAssert("/test" == sites[0]["friendlyURL"] as! String)
+		XCTAssert("/guest" == sites[1]["friendlyURL"] as! String)
 	}
 
 	func testHeader() {

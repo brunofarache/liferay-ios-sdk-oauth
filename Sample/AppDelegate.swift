@@ -2,7 +2,7 @@
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var rootViewController: MainViewController!
-	var window: UIWindow!
+	var window: UIWindow?
 
 	func application(
 			application: UIApplication,
@@ -11,15 +11,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		window = UIWindow(frame: UIScreen.mainScreen().bounds)
 		rootViewController = MainViewController()
-		window.rootViewController = rootViewController
-		window.makeKeyAndVisible()
+		window!.rootViewController = rootViewController
+		window!.makeKeyAndVisible()
 
 		return true
 	}
 
 	func application(
 			application: UIApplication, openURL callbackURL: NSURL,
-			sourceApplication: String, annotation: AnyObject?)
+			sourceApplication: String?, annotation: AnyObject?)
 		-> Bool {
 
 		rootViewController.accessTokenWithCallbackURL(callbackURL)
