@@ -20,6 +20,7 @@
 		CC4A6BCC1A8523F400D15379 /* LROAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A6BC91A8523F400D15379 /* LROAuthConfig.m */; };
 		CC59EE6E1A852F130031E110 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC59EE6D1A852F130031E110 /* settings.plist */; };
 		CC59EE741A853B180031E110 /* OAuthTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59EE701A8538870031E110 /* OAuthTest.swift */; };
+		CCD341BF1B0E12CB000180C5 /* Liferay-OAuth.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CCD341BE1B0E12CB000180C5 /* Liferay-OAuth.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		CC59EE721A8538B50031E110 /* Test-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Test-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC5CBE751A84143100C6F696 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5CBE8A1A84143100C6F696 /* Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCD341BE1B0E12CB000180C5 /* Liferay-OAuth.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Liferay-OAuth.podspec"; sourceTree = "<group>"; };
 		CCF9245F1A85294C0032A9A9 /* LROAuth+Testable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LROAuth+Testable.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 				CC5CBE761A84143100C6F696 /* Products */,
 				0C500D5E581F3528DAA85C1B /* Pods */,
 				1FC640246614EAEC62582DD5 /* Frameworks */,
+				CCD341BE1B0E12CB000180C5 /* Liferay-OAuth.podspec */,
 			);
 			sourceTree = "<group>";
 		};
@@ -272,6 +275,7 @@
 				CC4384DB1A8A52A6006319E5 /* settings.plist in Resources */,
 				CC2788E01A9F4F7D00E305B8 /* MainViewController.xib in Resources */,
 				CC2788DE1A9F4F7D00E305B8 /* Launch Screen.xib in Resources */,
+				CCD341BF1B0E12CB000180C5 /* Liferay-OAuth.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
