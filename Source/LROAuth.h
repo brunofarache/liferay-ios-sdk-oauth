@@ -12,7 +12,8 @@
  * details.
  */
 
-#import "LRAuthentication.h"
+@import LRMobileSDK;
+
 #import "LROAuthConfig.h"
 
 /**

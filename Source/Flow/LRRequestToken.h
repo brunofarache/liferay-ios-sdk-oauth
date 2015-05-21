@@ -12,7 +12,7 @@
  * details.
  */
 
-#import "LRSession.h"
+@import LRMobileSDK;
 
 #import "LROAuthConfig.h"
 

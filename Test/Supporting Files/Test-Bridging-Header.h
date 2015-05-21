@@ -1,10 +1,9 @@
 #import <Foundation/Foundation.h>
-#import "LRBasicAuthentication.h"
+
+@import LRMobileSDK;
+@import TRVSMonitor;
+
 #import "LROAuth.h"
 #import "LROAuth+Testable.h"
 #import "LROAuthConfig.h"
-#import "LRGroupService_v62.h"
 #import "LRRequestToken.h"
-#import "LRSession.h"
-#import "LRValidator.h"
-#import "TRVSMonitor.h"
