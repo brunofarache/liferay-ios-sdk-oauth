@@ -12,11 +12,11 @@ Pod::Spec.new do |s|
 								"Bruno Farache" => "bruno.farache@liferay.com"
 							}
 	s.platform				= :ios
-	s.ios.deployment_target	= '8.0'
+	s.ios.deployment_target	= ‘7.0’
 	s.source				= {
 								:git => "https://github.com/brunofarache/liferay-ios-sdk-oauth.git",
 								:tag => "0.1.0"
 							}
 	s.source_files			= "{Source}/**/*"
-	s.dependency			"Liferay-iOS-SDK", "6.2.0.17"
+	s.dependency			"Liferay-iOS-SDK", “6.2.0.21”
 end
