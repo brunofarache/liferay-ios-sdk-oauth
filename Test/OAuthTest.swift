@@ -55,13 +55,19 @@ class OAuthTest: XCTestCase {
 
 		let service = LRGroupService_v62(session: session)
 		var error: NSError?
-		let sites = service.getUserSites(&error)
+		var sites = []
+
+		do {
+			sites = try service.getUserSites()
+		} catch let caught as NSError {
+			error = caught
+		}
 
 		XCTAssertNil(error)
 		XCTAssertTrue(sites.count > 0)
-
-		XCTAssert("/test" == sites[0]["friendlyURL"] as! String)
-		XCTAssert("/guest" == sites[1]["friendlyURL"] as! String)
+		
+		XCTAssert("/test" == sites[0]["friendlyURL"] as AnyObject as! String)
+		XCTAssert("/guest" == sites[1]["friendlyURL"] as AnyObject as! String)
 	}
 
 	func testHeader() {
