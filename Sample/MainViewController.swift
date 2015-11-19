@@ -53,8 +53,8 @@ class MainViewController: UIViewController {
 					server: self.config.server, authentication: oauth)
 
 				let service = LRGroupService_v62(session: session)
-				var error: NSError?
-				let sites = service.getUserSites(&error)
+				
+				let sites = try! service.getUserSites()
 				var text = ""
 
 				for site in sites {
