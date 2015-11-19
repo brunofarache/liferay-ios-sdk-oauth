@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(
 			application: UIApplication, openURL callbackURL: NSURL,
-			sourceApplication: String?, annotation: AnyObject?)
+			sourceApplication: String?, annotation: AnyObject)
 		-> Bool {
 
 		rootViewController.accessTokenWithCallbackURL(callbackURL)

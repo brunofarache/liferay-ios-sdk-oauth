@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
 		super.init(nibName: "MainViewController", bundle: nil)
 	}
 
-	required init(coder: NSCoder) {
+	required init?(coder: NSCoder) {
 		super.init(coder: coder)
 	}
 
