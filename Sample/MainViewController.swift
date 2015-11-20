@@ -53,15 +53,20 @@ class MainViewController: UIViewController {
 					server: self.config.server, authentication: oauth)
 
 				let service = LRGroupService_v62(session: session)
-				
-				let sites = try! service.getUserSites()
-				var text = ""
 
-				for site in sites {
-					text = text + (site["name"]! as! String) + "\n"
+				do {
+					let sites = try service.getUserSites()
+					var text = ""
+
+					for site in sites {
+						text = text + (site["name"]! as! String) + "\n"
+					}
+
+					self.label.text = text
 				}
-
-				self.label.text = text
+				catch let error as NSError {
+					NSLog("%@", error)
+				}
 			},
 			onFailure: {
 				NSLog("%@", $0)
