@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
 								:tag => "0.1.1"
 							}
 	s.source_files			= "{Source}/**/*"
-	s.dependency			"Liferay-iOS-SDK", "6.2.0.21"
+	s.dependency			"Liferay-iOS-SDK", "6.2.0.22"
 end
