@@ -81,5 +81,27 @@ class MainViewController: UIViewController {
 			}
 		)
 	}
+	
+	func loadData(config : LROAuthConfig!){
+		let oauth = LROAuth(config: config)
+		let session = LRSession(
+			server: self.config.server, authentication: oauth)
+		
+		let service = LRGroupService_v62(session: session)
+		
+		do {
+			let sites = try service.getUserSites()
+			var text = ""
+			
+			for site in sites {
+				text = text + (site["name"]! as! String) + "\n"
+			}
+			self.label.text = text
+		}
+		catch let error as NSError {
+			NSLog("%@", error)
+		}
+
+	}
 
 }
