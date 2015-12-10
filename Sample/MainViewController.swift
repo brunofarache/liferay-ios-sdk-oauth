@@ -41,6 +41,27 @@ class MainViewController: UIViewController {
 		)
 	}
 
+	@IBAction func loginWithWebview(sender: UIButton) {
+		self.label.text = ""
+		
+		setupNewConfigs()
+		
+		let webviewViewController = WebviewViewController(
+			config: self.config,
+			resultBlock: { (config :LROAuthConfig?) -> Void in
+				guard let c = config else {
+					return
+				}
+
+				self.loadData(c)
+
+			}
+		)
+		
+		presentViewController(webviewViewController, animated: true,
+			completion: nil)
+	}
+	
 	func accessTokenWithCallbackURL(callbackURL: NSURL) {
 		let params = LROAuth.extractRequestParams(callbackURL.query);
 		config.verifier = params["oauth_verifier"] as! String
