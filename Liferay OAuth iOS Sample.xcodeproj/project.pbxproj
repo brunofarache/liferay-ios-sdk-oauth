@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02381247F028CB9F69B4282B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E005B8F3445DFA59519D5E /* Pods.framework */; };
 		15A3DE4A763D33DF046CCF6F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E005B8F3445DFA59519D5E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4A77C23C1C18C29200DEA5A2 /* LROAuthWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A77C23B1C18C29200DEA5A2 /* LROAuthWebView.m */; settings = {ASSET_TAGS = (); }; };
 		9E6B82977996167422CC96B4 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		CC2788DD1A9F4F7D00E305B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2788D51A9F4F7D00E305B8 /* AppDelegate.swift */; };
 		CC2788DE1A9F4F7D00E305B8 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2788D61A9F4F7D00E305B8 /* Launch Screen.xib */; };
@@ -36,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		1901028DC308BA3EBFFE0886 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4A77C23A1C18C29200DEA5A2 /* LROAuthWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LROAuthWebView.h; path = View/LROAuthWebView.h; sourceTree = "<group>"; };
+		4A77C23B1C18C29200DEA5A2 /* LROAuthWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LROAuthWebView.m; path = View/LROAuthWebView.m; sourceTree = "<group>"; };
+		4A77C23D1C18C2C000DEA5A2 /* LROAuthCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LROAuthCallback.h; sourceTree = "<group>"; };
 		4CD58D74296BBF065248CC23 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		86E005B8F3445DFA59519D5E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2788D51A9F4F7D00E305B8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4A77C2391C18C1EE00DEA5A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A77C23A1C18C29200DEA5A2 /* LROAuthWebView.h */,
+				4A77C23B1C18C29200DEA5A2 /* LROAuthWebView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		CC2788D91A9F4F7D00E305B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				CC4A6BC31A8523F400D15379 /* Flow */,
+				4A77C2391C18C1EE00DEA5A2 /* View */,
 				CC4A6BC61A8523F400D15379 /* LROAuth.h */,
 				CC4A6BC71A8523F400D15379 /* LROAuth.m */,
+				4A77C23D1C18C2C000DEA5A2 /* LROAuthCallback.h */,
 				CC4A6BC81A8523F400D15379 /* LROAuthConfig.h */,
 				CC4A6BC91A8523F400D15379 /* LROAuthConfig.m */,
 			);
@@ -397,6 +412,7 @@
 				CC4A6BCB1A8523F400D15379 /* LROAuth.m in Sources */,
 				CC4A6BCA1A8523F400D15379 /* LRRequestToken.m in Sources */,
 				CC2788DF1A9F4F7D00E305B8 /* MainViewController.swift in Sources */,
+				4A77C23C1C18C29200DEA5A2 /* LROAuthWebView.m in Sources */,
 				CC2788DD1A9F4F7D00E305B8 /* AppDelegate.swift in Sources */,
 				CC4384DA1A89627A006319E5 /* LRAccessToken.m in Sources */,
 			);
