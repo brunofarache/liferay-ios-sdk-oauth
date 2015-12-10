@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Sample" customModuleProvider="target">
@@ -16,15 +17,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBF-N0-1rn">
-                    <rect key="frame" x="276" y="46" width="48" height="30"/>
-                    <state key="normal" title="Sign In">
+                    <rect key="frame" x="239" y="108" width="122" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Sign In  - Browser">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="login:" destination="-1" eventType="touchUpInside" id="1jb-D9-10a"/>
+                        <action selector="loginWithBrowser:" destination="-1" eventType="touchUpInside" id="jKf-xq-bg0"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8Z-mq-SS1">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8Z-mq-SS1">
+                    <rect key="frame" x="300" y="178" width="0.0" height="0.0"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" priority="500" constant="100" id="oL9-Hv-p4H"/>
                         <constraint firstAttribute="height" priority="500" constant="21" id="tSX-hr-a74"/>
@@ -33,13 +37,26 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXx-EU-Igz">
+                    <rect key="frame" x="237" y="70" width="127" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Sign In  - Webview">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="loginWithWebview:" destination="-1" eventType="touchUpInside" id="q1u-g6-xzO"/>
+                    </connections>
+                </button>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="u8Z-mq-SS1" firstAttribute="top" secondItem="pBF-N0-1rn" secondAttribute="top" constant="70" id="3Fl-eU-xrs"/>
-                <constraint firstItem="pBF-N0-1rn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4sP-YF-cj6"/>
-                <constraint firstItem="pBF-N0-1rn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="46" id="LMV-j7-6nE"/>
+                <constraint firstItem="iXx-EU-Igz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="94s-Qf-MRL"/>
+                <constraint firstItem="pBF-N0-1rn" firstAttribute="top" secondItem="iXx-EU-Igz" secondAttribute="bottom" constant="8" id="JAs-W9-EJv"/>
                 <constraint firstAttribute="centerX" secondItem="u8Z-mq-SS1" secondAttribute="centerX" id="SWN-s5-xIw"/>
+                <constraint firstItem="pBF-N0-1rn" firstAttribute="centerX" secondItem="iXx-EU-Igz" secondAttribute="centerX" id="grw-I8-E5W"/>
+                <constraint firstItem="iXx-EU-Igz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="qwg-Kd-oY6"/>
             </constraints>
             <point key="canvasLocation" x="103" y="354"/>
         </view>
