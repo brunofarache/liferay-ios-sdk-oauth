@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebviewViewController" customModule="Sample" customModuleProvider="target">
             <connections>
+                <outlet property="_activityIndicator" destination="xRg-ZA-wj8" id="0pL-L2-jBN"/>
                 <outlet property="_navigationItem" destination="axs-FD-EBh" id="32o-cs-BqD"/>
                 <outlet property="_webview" destination="Yvo-IA-4f1" id="Tec-UF-Ri8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -32,14 +33,20 @@
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xRg-ZA-wj8">
+                    <rect key="frame" x="290" y="322" width="20" height="20"/>
+                    <animations/>
+                </activityIndicatorView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Yvo-IA-4f1" firstAttribute="top" secondItem="thr-3C-Ciz" secondAttribute="bottom" id="1ag-up-DPk"/>
+                <constraint firstItem="xRg-ZA-wj8" firstAttribute="centerX" secondItem="Yvo-IA-4f1" secondAttribute="centerX" id="3GO-qZ-yuB"/>
                 <constraint firstItem="thr-3C-Ciz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Blq-W2-IC8"/>
                 <constraint firstAttribute="bottom" secondItem="Yvo-IA-4f1" secondAttribute="bottom" id="CZr-OI-k5T"/>
                 <constraint firstAttribute="trailing" secondItem="thr-3C-Ciz" secondAttribute="trailing" id="MXd-Qu-fuH"/>
+                <constraint firstItem="xRg-ZA-wj8" firstAttribute="centerY" secondItem="Yvo-IA-4f1" secondAttribute="centerY" id="O6A-Sq-Y8q"/>
                 <constraint firstAttribute="trailing" secondItem="Yvo-IA-4f1" secondAttribute="trailing" id="Q2j-WK-xZk"/>
                 <constraint firstItem="thr-3C-Ciz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UAE-RO-7xb"/>
                 <constraint firstItem="Yvo-IA-4f1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vSA-hf-eID"/>

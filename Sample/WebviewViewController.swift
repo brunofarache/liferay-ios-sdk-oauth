@@ -2,6 +2,7 @@ class WebviewViewController: UIViewController, LROAuthCallback {
 	
 	@IBOutlet private var _navigationItem: UINavigationItem!
 	@IBOutlet private var _webview: LROAuthWebView!
+	@IBOutlet weak var _activityIndicator: UIActivityIndicatorView!
 	
 	init(config: LROAuthConfig, resultBlock:((LROAuthConfig?) -> Void)) {
 		super.init(nibName : "WebviewViewController", bundle : nil)
@@ -29,12 +30,17 @@ class WebviewViewController: UIViewController, LROAuthCallback {
 	}
 	
 	func close() {
+		_activityIndicator.stopAnimating()
 		dismissViewControllerAnimated(true, completion: nil)
 	}
 	
 	func onFailure(error: NSError!) {
 		close()
 		_resultBlock(nil)
+	}
+	
+	func onGrantedAccess() {
+		_activityIndicator.startAnimating()
 	}
 	
 	func onSuccess(config: LROAuthConfig!) {
