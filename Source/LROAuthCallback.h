@@ -19,8 +19,14 @@
  */
 @protocol LROAuthCallback <NSObject>
 
+@required
+
 - (void)onFailure:(NSError*)error;
 
 - (void)onSuccess:(LROAuthConfig*)config;
+
+@optional
+
+- (void)onGrantedAccess;
 
 @end

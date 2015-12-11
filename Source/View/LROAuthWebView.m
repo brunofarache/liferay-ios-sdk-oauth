@@ -20,6 +20,7 @@
 #import "LRRequestToken.h"
 
 #define DEFAUL_ELEMENT_ID_BUTTON_GRANT_ACCESS @"_3_WAR_oauthportlet_fm"
+#define OAUTH_TOKEN @"oauthportlet_oauth_token"
 
 /**
  * @author Allan Melo
@@ -110,12 +111,13 @@
 			[queryButton stringByAppendingString:@".submit();"]];
 		}
 	}
-	
 }
 
 - (BOOL)webView:(UIWebView *)webView
 		shouldStartLoadWithRequest:(NSURLRequest *)request
 		navigationType:(UIWebViewNavigationType)navigationType{
+	
+	[self hideWebviewIfNecessary:request];
 	
 	if ([request.URL.absoluteString hasPrefix:self.config.callbackURL]) {
 		
@@ -134,6 +136,19 @@
 	}
 	
 	return YES;
+}
+
+- (void) hideWebviewIfNecessary:(NSURLRequest *)request{
+	if (self.allowAutomatically &&
+		[request.URL.absoluteString rangeOfString:
+		OAUTH_TOKEN].location != NSNotFound) {
+
+		self.hidden = YES;
+			
+		if ([self.callback respondsToSelector:@selector(onGrantedAccess)]) {
+			[self.callback onGrantedAccess];
+		}
+	}
 }
 
 @end
