@@ -105,20 +105,16 @@
 #pragma mark - UIWebViewDelegate
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-	if (self.allowAutomatically) {
+	if (self.allowAutomatically &&
+		[webView.request.URL.absoluteString rangeOfString:
+		OAUTH_TOKEN].location != NSNotFound) {
 		
 		NSString *queryButton =  [NSString
 			stringWithFormat:@"document.getElementById('%@')",
 			self.elementIdButtonGrantAccess];
 		
-		NSString *buttonHTML = [webView
-			stringByEvaluatingJavaScriptFromString:
-			[queryButton stringByAppendingString:@".innerHTML;"]];
-		
-		if (buttonHTML.length > 0) {
-			[webView stringByEvaluatingJavaScriptFromString:
-			[queryButton stringByAppendingString:@".submit();"]];
-		}
+		[webView stringByEvaluatingJavaScriptFromString:
+		[queryButton stringByAppendingString:@".submit();"]];
 	}
 }
 
