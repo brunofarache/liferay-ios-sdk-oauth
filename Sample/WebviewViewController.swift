@@ -34,6 +34,11 @@ class WebviewViewController: UIViewController, LROAuthCallback {
 		dismissViewControllerAnimated(true, completion: nil)
 	}
 	
+	func onDeniedAccess() {
+		close()
+		_resultBlock(nil)
+	}
+	
 	func onFailure(error: NSError!) {
 		close()
 		_resultBlock(nil)

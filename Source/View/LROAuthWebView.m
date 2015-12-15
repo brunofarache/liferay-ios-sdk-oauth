@@ -135,7 +135,9 @@
 	else if (self.callbackDenyUrl &&
 			 [request.URL.absoluteString hasSuffix:self.callbackDenyUrl]){
 
-		[self.callback onFailure:nil];
+		if ([self.callback respondsToSelector:@selector(onDeniedAccess)]) {
+			[self.callback onDeniedAccess];
+		}
 		
 		[self _clearAllCookies];
 		
