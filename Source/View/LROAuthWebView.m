@@ -73,6 +73,19 @@
 	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+- (void) _hideWebViewIfNecessary:(NSURLRequest *)request{
+	if (self.allowAutomatically &&
+		[request.URL.absoluteString rangeOfString:
+		OAUTH_TOKEN].location != NSNotFound) {
+
+		self.hidden = YES;
+			
+		if ([self.callback respondsToSelector:@selector(onGrantedAccess)]) {
+			[self.callback onGrantedAccess];
+		}
+	}
+}
+
 - (void)_onCallBackURL:(NSURL *)url{
 	self.config.verifier = url.absoluteString;
 	
@@ -136,19 +149,6 @@
 	}
 	
 	return YES;
-}
-
-- (void) hideWebviewIfNecessary:(NSURLRequest *)request{
-	if (self.allowAutomatically &&
-		[request.URL.absoluteString rangeOfString:
-		OAUTH_TOKEN].location != NSNotFound) {
-
-		self.hidden = YES;
-			
-		if ([self.callback respondsToSelector:@selector(onGrantedAccess)]) {
-			[self.callback onGrantedAccess];
-		}
-	}
 }
 
 @end
