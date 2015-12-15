@@ -122,7 +122,7 @@
 		shouldStartLoadWithRequest:(NSURLRequest *)request
 		navigationType:(UIWebViewNavigationType)navigationType{
 	
-	[self hideWebviewIfNecessary:request];
+	[self _hideWebViewIfNecessary:request];
 	
 	if ([request.URL.absoluteString hasPrefix:self.config.callbackURL]) {
 		
