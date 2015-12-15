@@ -96,12 +96,8 @@
 			self.config = config;
 			[self.callback onSuccess:self.config];
 			
-			[self _clearAllCookies];
-			
 		} onFailure:^(NSError *error) {
 			[self.callback onFailure:error];
-			
-			[self _clearAllCookies];
 		}
 	 ];	
 }
@@ -135,6 +131,8 @@
 	if ([request.URL.absoluteString hasPrefix:self.config.callbackURL]) {
 		
 		[self _onCallBackURL:webView.request.URL];
+		
+		[self _clearAllCookies];
 		
 		return NO;
 	}
