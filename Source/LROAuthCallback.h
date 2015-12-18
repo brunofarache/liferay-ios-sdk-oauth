@@ -21,9 +21,8 @@
 
 @required
 
-- (void)onFailure:(NSError*)error;
-
-- (void)onSuccess:(LROAuthConfig*)config;
+- (void)onFailure:(NSError *)error;
+- (void)onSuccess:(LROAuthConfig *)config;
 
 @optional
 

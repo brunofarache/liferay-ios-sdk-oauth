@@ -12,7 +12,8 @@
  * details.
  */
 
-#import <UIKit/UIKit.h>
+#import <UIKit/UIWebView.h>
+
 #import "LROAuthConfig.h"
 #import "LROAuthCallback.h"
 
@@ -21,10 +22,12 @@
  */
 @interface LROAuthWebView : UIWebView
 
-@property (nonatomic) BOOL allowAutomatically;
-@property (nonatomic, strong) NSString *callbackDenyUrl;
-@property (nonatomic, strong) NSString *elementIdButtonGrantAccess;
+@property (nonatomic, strong) NSString *denyURL;
+@property (nonatomic) BOOL grantAutomatically;
 
-- (void)start:(LROAuthConfig*)config callback:(id<LROAuthCallback>)callback;
+- (void)start:(LROAuthConfig *)config callback:(id<LROAuthCallback>)callback;
+
+- (void)start:(LROAuthConfig *)config callback:(id<LROAuthCallback>)callback
+	denyURL:(NSString *)denyURL;
 
 @end

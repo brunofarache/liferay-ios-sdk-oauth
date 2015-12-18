@@ -17,8 +17,6 @@ class WebviewViewController: UIViewController, LROAuthCallback {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		_webview.allowAutomatically = true;
-		
 		_webview.start(_config, callback: self)
 		
 		let backButtonBar = UIBarButtonItem(
