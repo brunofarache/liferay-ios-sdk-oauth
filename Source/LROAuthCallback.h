@@ -26,8 +26,7 @@
 
 @optional
 
-- (void)onDeniedAccess;
-
-- (void)onGrantedAccess;
+- (void)onDenied;
+- (void)onGranted;
 
 @end

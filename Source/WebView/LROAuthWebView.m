@@ -48,7 +48,7 @@
 
 #pragma mark - Private Methods
 
-- (void) _clearAllCookies {
+- (void)_clearAllCookies {
 	NSHTTPCookieStorage *storage = [NSHTTPCookieStorage
 		sharedHTTPCookieStorage];
 
@@ -63,8 +63,8 @@
 	if (self.grantAutomatically && [self _isGrantPage:request.URL]) {
 		self.hidden = YES;
 
-		if ([self.callback respondsToSelector:@selector(onGrantedAccess)]) {
-			[self.callback onGrantedAccess];
+		if ([self.callback respondsToSelector:@selector(onGranted)]) {
+			[self.callback onGranted];
 		}
 	}
 }
@@ -120,12 +120,14 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
 	if (self.grantAutomatically && [self _isGrantPage:webView.request.URL]) {
-		NSString *queryButton =  [NSString
+		NSString *formQuery =  [NSString
 			stringWithFormat:@"document.getElementById('%@')",
 			OAUTH_PORTLET_FORM_ID];
 
-		[webView stringByEvaluatingJavaScriptFromString:
-		[queryButton stringByAppendingString:@".submit();"]];
+		NSString *javascript = [formQuery
+			stringByAppendingString:@".submit();"];
+
+		[webView stringByEvaluatingJavaScriptFromString:javascript];
 	}
 }
 
@@ -144,8 +146,8 @@
 	else if (self.denyURL &&
 			[request.URL.absoluteString hasSuffix:self.denyURL]) {
 
-		if ([self.callback respondsToSelector:@selector(onDeniedAccess)]) {
-			[self.callback onDeniedAccess];
+		if ([self.callback respondsToSelector:@selector(onDenied)]) {
+			[self.callback onDenied];
 		}
 
 		[self _clearAllCookies];
