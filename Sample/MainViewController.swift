@@ -18,8 +18,7 @@ class MainViewController: UIViewController {
 	
 	@IBAction func loginWithBrowser(sender: UIButton) {
 		self.label.text = ""
-		
-		setupNewConfigs()
+		createConfig()
 
 		LRRequestToken.requestTokenWithConfig(
 			config,
@@ -34,28 +33,26 @@ class MainViewController: UIViewController {
 		)
 	}
 
-	@IBAction func loginWithWebview(sender: UIButton) {
+	@IBAction func loginWithWebView(sender: UIButton) {
 		self.label.text = ""
-		
-		setupNewConfigs()
-		
+		createConfig()
+
 		let webViewController = WebViewController(
 			config: self.config,
-			resultBlock: { (config :LROAuthConfig?) -> Void in
+			resultBlock: { config in
 				guard let c = config else {
 					return
 				}
 
-				self.loadData(c)
-
+				self.showSites(c)
 			}
 		)
-		
+
 		presentViewController(webViewController, animated: true,
 			completion: nil)
 	}
 	
-	func setupNewConfigs() {
+	func createConfig() {
 		let server = settings["server"]
 		let consumerKey = settings["oauth_consumer_key"]
 		let consumerSecret = settings["oauth_consumer_secret"]
@@ -73,35 +70,34 @@ class MainViewController: UIViewController {
 		LRAccessToken.accessTokenWithConfig(
 			config,
 			onSuccess: { config in
-				self.loadData(config)
-				
+				self.showSites(config)
 			},
 			onFailure: {
 				NSLog("%@", $0)
 			}
 		)
 	}
-	
-	func loadData(config : LROAuthConfig!){
+
+	func showSites(config: LROAuthConfig!){
 		let oauth = LROAuth(config: config)
 		let session = LRSession(
 			server: self.config.server, authentication: oauth)
-		
+
 		let service = LRGroupService_v62(session: session)
-		
+
 		do {
 			let sites = try service.getUserSites()
 			var text = ""
-			
+
 			for site in sites {
 				text = text + (site["name"]! as! String) + "\n"
 			}
+
 			self.label.text = text
 		}
 		catch let error as NSError {
 			NSLog("%@", error)
 		}
-
 	}
 
 }

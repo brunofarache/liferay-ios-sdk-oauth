@@ -28,7 +28,7 @@
                         <navigationItem title="OAuth Webview" id="axs-FD-EBh"/>
                     </items>
                 </navigationBar>
-                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yvo-IA-4f1" customClass="LROAuthWebView">
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yvo-IA-4f1" userLabel="WebView" customClass="LROAuthWebView">
                     <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

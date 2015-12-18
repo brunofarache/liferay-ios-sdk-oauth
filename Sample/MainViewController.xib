@@ -34,7 +34,7 @@
                         <constraint firstAttribute="height" priority="500" constant="21" id="tSX-hr-a74"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXx-EU-Igz">
@@ -44,7 +44,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="loginWithWebview:" destination="-1" eventType="touchUpInside" id="q1u-g6-xzO"/>
+                        <action selector="loginWithWebView:" destination="-1" eventType="touchUpInside" id="Vgu-gB-FYu"/>
                     </connections>
                 </button>
             </subviews>

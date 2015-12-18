@@ -2,6 +2,6 @@
 
 #import "LRAccessToken.h"
 #import "LROAuth.h"
-#import "LRRequestToken.h"
-#import "LROAuthWebView.h"
 #import "LROAuthCallback.h"
+#import "LROAuthWebView.h"
+#import "LRRequestToken.h"
