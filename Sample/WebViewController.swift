@@ -1,11 +1,11 @@
-class WebviewViewController: UIViewController, LROAuthCallback {
-	
+class WebViewController: UIViewController, LROAuthCallback {
+
 	@IBOutlet private var _navigationItem: UINavigationItem!
 	@IBOutlet private var _webview: LROAuthWebView!
 	@IBOutlet weak var _activityIndicator: UIActivityIndicatorView!
 	
 	init(config: LROAuthConfig, resultBlock:((LROAuthConfig?) -> Void)) {
-		super.init(nibName : "WebviewViewController", bundle : nil)
+		super.init(nibName : "WebViewController", bundle : nil)
 
 		_config = config
 		_resultBlock = resultBlock

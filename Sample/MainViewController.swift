@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
 		
 		setupNewConfigs()
 		
-		let webviewViewController = WebviewViewController(
+		let webViewController = WebViewController(
 			config: self.config,
 			resultBlock: { (config :LROAuthConfig?) -> Void in
 				guard let c = config else {
@@ -51,7 +51,7 @@ class MainViewController: UIViewController {
 			}
 		)
 		
-		presentViewController(webviewViewController, animated: true,
+		presentViewController(webViewController, animated: true,
 			completion: nil)
 	}
 	

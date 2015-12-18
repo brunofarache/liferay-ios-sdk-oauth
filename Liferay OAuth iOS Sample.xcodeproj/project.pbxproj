@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		02381247F028CB9F69B4282B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E005B8F3445DFA59519D5E /* Pods.framework */; };
 		15A3DE4A763D33DF046CCF6F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E005B8F3445DFA59519D5E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		4A77C2471C18C4A000DEA5A2 /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77C2451C18C4A000DEA5A2 /* WebviewViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4A77C2481C18C4A000DEA5A2 /* WebviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A77C2461C18C4A000DEA5A2 /* WebviewViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		4A77C2471C18C4A000DEA5A2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77C2451C18C4A000DEA5A2 /* WebViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4A77C2481C18C4A000DEA5A2 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A77C2461C18C4A000DEA5A2 /* WebViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		9E6B82977996167422CC96B4 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		CC14D81D1C2485D1001AAB29 /* LROAuthWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC14D81C1C2485D1001AAB29 /* LROAuthWebView.m */; settings = {ASSET_TAGS = (); }; };
 		CC2788DD1A9F4F7D00E305B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2788D51A9F4F7D00E305B8 /* AppDelegate.swift */; };
@@ -40,8 +40,8 @@
 /* Begin PBXFileReference section */
 		1901028DC308BA3EBFFE0886 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4A77C23D1C18C2C000DEA5A2 /* LROAuthCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LROAuthCallback.h; sourceTree = "<group>"; };
-		4A77C2451C18C4A000DEA5A2 /* WebviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
-		4A77C2461C18C4A000DEA5A2 /* WebviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebviewViewController.xib; sourceTree = "<group>"; };
+		4A77C2451C18C4A000DEA5A2 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		4A77C2461C18C4A000DEA5A2 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		4CD58D74296BBF065248CC23 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		86E005B8F3445DFA59519D5E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC14D81B1C2485D1001AAB29 /* LROAuthWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuthWebView.h; sourceTree = "<group>"; };
@@ -137,8 +137,8 @@
 				CC2788D61A9F4F7D00E305B8 /* Launch Screen.xib */,
 				CC2788D71A9F4F7D00E305B8 /* MainViewController.swift */,
 				CC2788D81A9F4F7D00E305B8 /* MainViewController.xib */,
-				4A77C2451C18C4A000DEA5A2 /* WebviewViewController.swift */,
-				4A77C2461C18C4A000DEA5A2 /* WebviewViewController.xib */,
+				4A77C2451C18C4A000DEA5A2 /* WebViewController.swift */,
+				4A77C2461C18C4A000DEA5A2 /* WebViewController.xib */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -299,7 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A77C2481C18C4A000DEA5A2 /* WebviewViewController.xib in Resources */,
+				4A77C2481C18C4A000DEA5A2 /* WebViewController.xib in Resources */,
 				CC4384DB1A8A52A6006319E5 /* settings.plist in Resources */,
 				CC2788E01A9F4F7D00E305B8 /* MainViewController.xib in Resources */,
 				CC2788DE1A9F4F7D00E305B8 /* Launch Screen.xib in Resources */,
@@ -421,7 +421,7 @@
 				CC14D81D1C2485D1001AAB29 /* LROAuthWebView.m in Sources */,
 				CC2788DF1A9F4F7D00E305B8 /* MainViewController.swift in Sources */,
 				CC2788DD1A9F4F7D00E305B8 /* AppDelegate.swift in Sources */,
-				4A77C2471C18C4A000DEA5A2 /* WebviewViewController.swift in Sources */,
+				4A77C2471C18C4A000DEA5A2 /* WebViewController.swift in Sources */,
 				CC4384DA1A89627A006319E5 /* LRAccessToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
