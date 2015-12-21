@@ -32,7 +32,7 @@ class WebViewController: UIViewController, LROAuthCallback {
 		dismissViewControllerAnimated(true, completion: nil)
 	}
 
-	func onDeniedAccess() {
+	func onDenied() {
 		close()
 		_resultBlock(nil)
 	}
@@ -42,7 +42,8 @@ class WebViewController: UIViewController, LROAuthCallback {
 		_resultBlock(nil)
 	}
 
-	func onGrantedAccess() {
+	func onPreGrant() {
+		_webview.hidden = true
 		_activityIndicator.startAnimating()
 	}
 
