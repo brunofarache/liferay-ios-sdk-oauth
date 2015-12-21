@@ -86,6 +86,7 @@
 		denyURL:(NSString *)denyURL
 		grantAutomatically:(BOOL)grantAutomatically {
 
+	[self _removeAllCookies];
 	self.delegate = self;
 
 	self.config = config;
@@ -126,10 +127,9 @@
 		shouldStartLoadWithRequest:(NSURLRequest *)request
 		navigationType:(UIWebViewNavigationType)navigationType {
 
-	if (self.grantAutomatically && [self _isGrantPage:request.URL]) {
-		if ([self.callback respondsToSelector:@selector(onPreGrant)]) {
-			[self.callback onPreGrant];
-		}
+	if ([self _isGrantPage:request.URL]) {
+		[self.callback onLoadPage:ASK_PERMISSION webview:webView
+			URL:request.URL];
 
 		return YES;
 	}
@@ -137,18 +137,16 @@
 	NSString *url = request.URL.absoluteString;
 
 	if ([url hasPrefix:self.config.callbackURL]) {
+		[self.callback onLoadPage:GRANTED webview:webView
+			URL:request.URL];
 		[self _onCallBackURL:webView.request.URL];
-		[self _removeAllCookies];
 		
 		return NO;
 	}
 
 	if (self.denyURL && [url hasSuffix:self.denyURL]) {
-		if ([self.callback respondsToSelector:@selector(onDenied)]) {
-			[self.callback onDenied];
-		}
-
-		[self _removeAllCookies];
+		[self.callback onLoadPage:DENIED webview:webView
+			URL:request.URL];
 
 		return NO;
 	}
