@@ -49,7 +49,7 @@
 
 #pragma mark - Private Methods
 
-- (BOOL)_isGrantPage:(NSURL *)URL {
+- (BOOL)_isAskPermissionPage:(NSURL *)URL {
 	NSUInteger range = [URL.absoluteString rangeOfString:OAUTH_TOKEN].location;
 	return (range != NSNotFound);
 }
@@ -87,8 +87,8 @@
 		grantAutomatically:(BOOL)grantAutomatically {
 
 	[self _removeAllCookies];
-	self.delegate = self;
 
+	self.delegate = self;
 	self.config = config;
 	self.callback = callback;
 	self.denyURL = denyURL;
@@ -111,7 +111,9 @@
 #pragma mark - UIWebViewDelegate
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-	if (self.grantAutomatically && [self _isGrantPage:webView.request.URL]) {
+	if (self.grantAutomatically &&
+		[self _isAskPermissionPage:webView.request.URL]) {
+
 		NSString *formQuery =  [NSString
 			stringWithFormat:@"document.getElementById('%@')",
 			OAUTH_PORTLET_FORM_ID];
@@ -127,9 +129,9 @@
 		shouldStartLoadWithRequest:(NSURLRequest *)request
 		navigationType:(UIWebViewNavigationType)navigationType {
 
-	if ([self _isGrantPage:request.URL]) {
+	if ([self _isAskPermissionPage:request.URL]) {
 		[self.callback onLoadPage:ASK_PERMISSION webview:webView
-			URL:request.URL];
+			url:request.URL];
 
 		return YES;
 	}
@@ -137,16 +139,14 @@
 	NSString *url = request.URL.absoluteString;
 
 	if ([url hasPrefix:self.config.callbackURL]) {
-		[self.callback onLoadPage:GRANTED webview:webView
-			URL:request.URL];
+		[self.callback onLoadPage:GRANTED webview:webView url:request.URL];
 		[self _onCallBackURL:webView.request.URL];
 		
 		return NO;
 	}
 
 	if (self.denyURL && [url hasSuffix:self.denyURL]) {
-		[self.callback onLoadPage:DENIED webview:webView
-			URL:request.URL];
+		[self.callback onLoadPage:DENIED webview:webView url:request.URL];
 
 		return NO;
 	}

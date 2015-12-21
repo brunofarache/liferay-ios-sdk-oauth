@@ -32,23 +32,23 @@ class WebViewController: UIViewController, LROAuthCallback {
 		dismissViewControllerAnimated(true, completion: nil)
 	}
 
-	func onFailure(error: NSError!) {
+	func onFailure(error: NSError) {
 		close()
 		_resultBlock(nil)
 	}
 
-	func onLoadPage(type: Page, webview webView: UIWebView!, URL: NSURL!) {
-		if type == DENIED {
+	func onLoadPage(page: Page, webview webView: UIWebView, url: NSURL) {
+		if (page == DENIED) {
 			close()
 			_resultBlock(nil)
 		}
-		else if type == ASK_PERMISSION {
+		else if (page == ASK_PERMISSION) {
 			_webview.hidden = true
 			_activityIndicator.startAnimating()
 		}
 	}
 
-	func onSuccess(config: LROAuthConfig!) {
+	func onSuccess(config: LROAuthConfig) {
 		close()
 		_resultBlock(config)
 	}
