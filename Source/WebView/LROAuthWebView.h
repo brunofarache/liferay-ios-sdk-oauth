@@ -23,7 +23,6 @@
 @interface LROAuthWebView : UIWebView
 
 @property (nonatomic, strong) NSString *denyURL;
-@property (nonatomic) BOOL grantAutomatically;
 
 - (void)start:(LROAuthConfig *)config callback:(id<LROAuthCallback>)callback;
 

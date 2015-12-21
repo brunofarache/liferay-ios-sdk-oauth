@@ -27,6 +27,7 @@
 
 @property (nonatomic, weak) id<LROAuthCallback> callback;
 @property (nonatomic, strong) LROAuthConfig *config;
+@property (nonatomic) BOOL grantAutomatically;
 
 @end
 
@@ -48,27 +49,6 @@
 
 #pragma mark - Private Methods
 
-- (void)_clearAllCookies {
-	NSHTTPCookieStorage *storage = [NSHTTPCookieStorage
-		sharedHTTPCookieStorage];
-
-	for (NSHTTPCookie *cookie in [storage cookies]) {
-		[storage deleteCookie:cookie];
-	}
-
-	[[NSUserDefaults standardUserDefaults] synchronize];
-}
-
-- (void)_hideWebView:(NSURLRequest *)request {
-	if (self.grantAutomatically && [self _isGrantPage:request.URL]) {
-		self.hidden = YES;
-
-		if ([self.callback respondsToSelector:@selector(onGranted)]) {
-			[self.callback onGranted];
-		}
-	}
-}
-
 - (BOOL)_isGrantPage:(NSURL *)URL {
 	NSUInteger range = [URL.absoluteString rangeOfString:OAUTH_TOKEN].location;
 	return (range != NSNotFound);
@@ -89,6 +69,17 @@
 			[self.callback onFailure:error];
 		}
 	 ];	
+}
+
+- (void)_removeAllCookies {
+	NSHTTPCookieStorage *storage = [NSHTTPCookieStorage
+		sharedHTTPCookieStorage];
+
+	for (NSHTTPCookie *cookie in [storage cookies]) {
+		[storage deleteCookie:cookie];
+	}
+
+	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)_start:(LROAuthConfig *)config callback:(id<LROAuthCallback>)callback
@@ -135,22 +126,29 @@
 		shouldStartLoadWithRequest:(NSURLRequest *)request
 		navigationType:(UIWebViewNavigationType)navigationType {
 
-	[self _hideWebView:request];
+	if (self.grantAutomatically && [self _isGrantPage:request.URL]) {
+		if ([self.callback respondsToSelector:@selector(onPreGrant)]) {
+			[self.callback onPreGrant];
+		}
 
-	if ([request.URL.absoluteString hasPrefix:self.config.callbackURL]) {
+		return YES;
+	}
+
+	NSString *url = request.URL.absoluteString;
+
+	if ([url hasPrefix:self.config.callbackURL]) {
 		[self _onCallBackURL:webView.request.URL];
-		[self _clearAllCookies];
+		[self _removeAllCookies];
 		
 		return NO;
 	}
-	else if (self.denyURL &&
-			[request.URL.absoluteString hasSuffix:self.denyURL]) {
 
+	if (self.denyURL && [url hasSuffix:self.denyURL]) {
 		if ([self.callback respondsToSelector:@selector(onDenied)]) {
 			[self.callback onDenied];
 		}
 
-		[self _clearAllCookies];
+		[self _removeAllCookies];
 
 		return NO;
 	}

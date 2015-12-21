@@ -27,6 +27,6 @@
 @optional
 
 - (void)onDenied;
-- (void)onGranted;
+- (void)onPreGrant;
 
 @end
