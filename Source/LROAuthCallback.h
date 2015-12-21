@@ -14,19 +14,19 @@
 
 #import "LROAuthConfig.h"
 
+typedef enum {
+	ASK_PERMISSION = 0,
+	DENIED = 1,
+	GRANTED = 2
+} Page;
+
 /**
  * @author Allan Melo
  */
 @protocol LROAuthCallback <NSObject>
 
-@required
-
 - (void)onFailure:(NSError *)error;
 - (void)onSuccess:(LROAuthConfig *)config;
-
-@optional
-
-- (void)onDenied;
-- (void)onPreGrant;
+- (void)onLoadPage:(Page)type webview:(UIWebView *)webView URL:(NSURL *)URL;
 
 @end
