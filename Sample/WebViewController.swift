@@ -4,11 +4,11 @@ class WebViewController: UIViewController, LROAuthCallback {
 	@IBOutlet private var _navigationItem: UINavigationItem!
 	@IBOutlet private var _webview: LROAuthWebView!
 
-	init(config: LROAuthConfig, resultBlock:((LROAuthConfig?) -> ())) {
+	init(config: LROAuthConfig, onSuccess:(LROAuthConfig -> ())) {
 		super.init(nibName : "WebViewController", bundle : nil)
 
 		_config = config
-		_resultBlock = resultBlock
+		_onSuccess = onSuccess
 	}
 
 	required init?(coder aDecoder: NSCoder) {
@@ -34,13 +34,11 @@ class WebViewController: UIViewController, LROAuthCallback {
 
 	func onFailure(error: NSError) {
 		close()
-		_resultBlock(nil)
 	}
 
 	func onLoadPage(page: Page, webview webView: UIWebView, url: NSURL) {
 		if (page == DENIED) {
 			close()
-			_resultBlock(nil)
 		}
 		else if (page == ASK_PERMISSION) {
 			_webview.hidden = true
@@ -50,10 +48,10 @@ class WebViewController: UIViewController, LROAuthCallback {
 
 	func onSuccess(config: LROAuthConfig) {
 		close()
-		_resultBlock(config)
+		_onSuccess(config)
 	}
 
 	private var _config:LROAuthConfig!
-	private var _resultBlock:((LROAuthConfig?) -> ())!
+	private var _onSuccess:(LROAuthConfig -> ())!
 
 }

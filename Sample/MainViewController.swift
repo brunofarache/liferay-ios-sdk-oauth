@@ -39,12 +39,8 @@ class MainViewController: UIViewController {
 
 		let webViewController = WebViewController(
 			config: self.config,
-			resultBlock: { config in
-				guard let c = config else {
-					return
-				}
-
-				self.showSites(c)
+			onSuccess: { config in
+				self.showSites(config)
 			}
 		)
 
