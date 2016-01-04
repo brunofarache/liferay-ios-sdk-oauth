@@ -44,8 +44,8 @@ class MainViewController: UIViewController {
 			}
 		)
 
-		presentViewController(webViewController, animated: true,
-			completion: nil)
+		presentViewController(
+			webViewController, animated: true, completion: nil)
 	}
 	
 	func createConfig() {
