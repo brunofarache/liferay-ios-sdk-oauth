@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		02381247F028CB9F69B4282B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E005B8F3445DFA59519D5E /* Pods.framework */; };
 		15A3DE4A763D33DF046CCF6F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E005B8F3445DFA59519D5E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		4A77C2471C18C4A000DEA5A2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77C2451C18C4A000DEA5A2 /* WebViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		4A77C2481C18C4A000DEA5A2 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A77C2461C18C4A000DEA5A2 /* WebViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		4A77C2471C18C4A000DEA5A2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77C2451C18C4A000DEA5A2 /* WebViewController.swift */; };
+		4A77C2481C18C4A000DEA5A2 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A77C2461C18C4A000DEA5A2 /* WebViewController.xib */; };
 		9E6B82977996167422CC96B4 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		CC14D81D1C2485D1001AAB29 /* LROAuthWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC14D81C1C2485D1001AAB29 /* LROAuthWebView.m */; settings = {ASSET_TAGS = (); }; };
+		CC14D81D1C2485D1001AAB29 /* LROAuthWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC14D81C1C2485D1001AAB29 /* LROAuthWebView.m */; };
 		CC2788DD1A9F4F7D00E305B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2788D51A9F4F7D00E305B8 /* AppDelegate.swift */; };
 		CC2788DE1A9F4F7D00E305B8 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2788D61A9F4F7D00E305B8 /* Launch Screen.xib */; };
 		CC2788DF1A9F4F7D00E305B8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2788D71A9F4F7D00E305B8 /* MainViewController.swift */; };
@@ -263,7 +263,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Liferay Inc.";
 				TargetAttributes = {
 					CC5CBE741A84143100C6F696 = {
@@ -465,6 +465,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -532,6 +533,7 @@
 				GCC_PREFIX_HEADER = "Sample/Supporting Files/Sample-Prefix.pch";
 				INFOPLIST_FILE = "Sample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liferay.mobile.sdk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sample/Supporting Files/Sample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -549,6 +551,7 @@
 				GCC_PREFIX_HEADER = "Sample/Supporting Files/Sample-Prefix.pch";
 				INFOPLIST_FILE = "Sample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liferay.mobile.sdk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sample/Supporting Files/Sample-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -573,6 +576,7 @@
 				);
 				INFOPLIST_FILE = "Test/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liferay.mobile.sdk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Test/Supporting Files/Test-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -594,6 +598,7 @@
 				GCC_PREFIX_HEADER = "Test/Supporting Files/Test-Prefix.pch";
 				INFOPLIST_FILE = "Test/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liferay.mobile.sdk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Test/Supporting Files/Test-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sample.app/Sample";
