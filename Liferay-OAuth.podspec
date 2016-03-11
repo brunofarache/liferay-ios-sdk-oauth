@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 	s.name					= "Liferay-OAuth"
 	s.module_name			= "LROAuth"
-	s.version				= "1.2.0"
+	s.version				= "1.2.1"
 	s.summary				= "Liferay iOS SDK OAuth"
 	s.homepage				= "https://github.com/brunofarache/liferay-ios-sdk-oauth"
 	s.license				= {
@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
 	s.ios.deployment_target	= "7.0"
 	s.source				= {
 								:git => "https://github.com/brunofarache/liferay-ios-sdk-oauth.git",
-								:tag => "1.2.0"
+								:tag => "1.2.1"
 							}
 	s.source_files			= "{Source}/**/*"
-	s.dependency			"Liferay-iOS-SDK", "7.0.3"
+	s.dependency			"Liferay-iOS-SDK", "~> 7.0.4"
 end
